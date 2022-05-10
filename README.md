@@ -27,10 +27,8 @@ Este é projeto integradar do curso web fullstack da DigitalHouse, com o intuito
 <p>CSS</p>
 <p>JavaScript</p>
 
-## Tecnologias:
+## Comandos Git:
 ````
-Comandos Git
-
 git clone url
 
 git add . (adicionar todos os arquivos)
