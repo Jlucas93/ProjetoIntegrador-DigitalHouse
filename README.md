@@ -1,4 +1,4 @@
-# PI
+# Projeto Integrador
 
 ## Sobre o Projeto
 
@@ -27,6 +27,23 @@ Este é projeto integradar do curso web fullstack da DigitalHouse, com o intuito
 <p>CSS</p>
 <p>JavaScript</p>
 
+## Tecnologias:
+````
+Comandos Git
+
+git clone url
+
+git add . (adicionar todos os arquivos)
+
+git commit -m "" (comentar arquivos adicionados)
+
+git push (subir as mudanças)
+
+git pull (baixar o repo) ou git pull origin nomeDaBranch
+
+git checkout -b nomeDaBranch (mudar a branch do repo)
+
+````
 
 ## 📝 Licença
 
