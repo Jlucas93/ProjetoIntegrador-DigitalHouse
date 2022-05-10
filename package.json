@@ -1,0 +1,19 @@
+{
+  "name": "pi",
+  "version": "1.0.0",
+  "description": "Este é projeto integradar do curso web fullstack da DigitalHouse, com o intuito de criar um e-commerce de roupas e acessórios.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jlucas93/PI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jlucas93/PI/issues"
+  },
+  "homepage": "https://github.com/Jlucas93/PI#readme"
+}
