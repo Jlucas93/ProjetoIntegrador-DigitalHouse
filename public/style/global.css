@@ -41,9 +41,10 @@ header img{
 .slider {
   display:flex;
   justify-content: center;
-  align-items:center;
-  width: 100%;
+  margin-left: 23rem;
   height: 350px;
+  width: 100%;
+  max-width: 800px;
   position: relative;
   overflow: hidden;
   margin-top: 8px;
@@ -82,12 +83,12 @@ header img{
 
 .btn-prev {
   top: 45%;
-  left: 25%;
+  left: 2%;
 }
 
 .btn-next {
   top: 45%;
-  right: 25%;
+  right: 2%;
 }
 .footer{
   display:flex;
