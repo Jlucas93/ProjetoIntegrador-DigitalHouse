@@ -1,8 +1,18 @@
 *{
-    margin:0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+/* main {
+  height: 100vh;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  background-color: red;
+} */
 
+header{
+  width: 100%;
+}
 header img{
   width: 50px;
 }
@@ -14,12 +24,11 @@ header img{
   color: #fff;
   height: 8vh;
 }
-
-.search{
-
+.links img{
+  display: flex;
+  justify-content: space-around;
+  margin-right: 10px;
 }
-
-
 .btn-outline{
 color: #fff !important;
 border: 1px solid #fff !important;
@@ -29,6 +38,58 @@ background-color: #00234B;
 opacity: .5;
 transform: scale(1.1);
 transition: .5s;
+}
+
+.slider {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 45%;
+  left: 25%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 25%;
 }
 .footer{
   display:flex;
