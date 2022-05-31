@@ -2,19 +2,12 @@
   margin: 0;
   padding: 0;
 }
-/* main {
-  height: 100vh;
-  display: flex;
-  place-items: center;
-  flex-direction: column;
-  background-color: red;
-} */
 
 header{
   width: 100%;
 }
 header img{
-  width: 50px;
+  width: 90px;
 }
 .navbar{
   display: flex;
@@ -24,20 +17,25 @@ header img{
   color: #fff;
   height: 8vh;
 }
-.links img{
-  display: flex;
-  justify-content: space-around;
-  margin-right: 10px;
+.navbar a{
+  cursor: pointer;
+  padding: 10px;
+  margin: 2px;
+  color: #fff;
 }
-.btn-outline{
-color: #fff !important;
-border: 1px solid #fff !important;
+.navbar button{
+  cursor: pointer;
+  width: 2rem;
+  border-radius: 100%;
 }
-.btn-outline:hover{
-background-color: #00234B;
-opacity: .5;
-transform: scale(1.1);
-transition: .5s;
+.navbar input{
+  width: 20rem;
+  border: 1px solid transparent;
+  border-radius: 25rem;
+  outline: none
+}
+.search img{
+  width: 1.5rem;
 }
 
 .slider {
