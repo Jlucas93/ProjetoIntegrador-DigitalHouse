@@ -45,20 +45,16 @@ header img{
 .slider {
   display:flex;
   justify-content: center;
-  margin-left: 23rem;
   height: 350px;
   width: 100%;
-  max-width: 800px;
   position: relative;
   overflow: hidden;
-  border-radius: 1rem;
   margin-top: 8px;
   margin-bottom: 8px;
 }
 
 .slide {
   width: 100%;
-  max-width: 800px;
   height: 350px;
   position: absolute;
   transition: all 0.5s;
