@@ -5,41 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/global.css">
+    <script defer src="./js/index.js"></script>
     <title>PI</title>
 </head>
 <body>
     <header>
-        <nav class="header">
-                <a href="#default" class="logo">Imagem do Projeto</a>
-                <div class="header-links">
-                  <a class="active" href="#home">Home</a>
-                  <a href="#">Masculino</a>
-                  <a href="#">Feminino</a>
-                  <a href="#">Calçados</a>
-                  <a href="#aout">acessórios</a>
-                </div>
-                <div class="searchBar">
-                    <input type="text" placeholder="Procurar"></input>
-                </div>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./img/logo.jpeg" alt="logo" />
+            </div>
+            <div class="links">
+                <a href="#">Masculino</a>
+                <a>Feminino</a>
+                <a>Acessórios</a>
+                <a>Calçados</a>
+            </div>
+            <div class="search">
+                <input
+                 type="text"
+                 placeholder="Procurando algo específico?"
+                />
+                <button
+                 type="submit"
+                 >
+                  <img src="./img/seacrh-icon.png" alt="imagem de lupa"/>
+                </button>
+            </div>
+            <div class="Login">
+                <a>Logar</a>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1>Hello World!!</h1>
-    </main>
-    <footer class="footer">
-        
-        <div class="mapa">
-            <p class="texto-do-mapa">Localização</p>
-            <img src="imagem do mapa" alt="mapa" />
+            <div class=slider>
+            <!-- slide 1 -->
+            <div class="slide">
+              <img
+                src="https://source.unsplash.com/random?landscape,mountain"
+                alt=""
+              />
+            </div>
+      
+             <!-- slide 2 -->
+            <div class="slide">
+              <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
+            </div>
+      
+             <!-- slide 3 -->
+            <div class="slide">
+              <img src="https://source.unsplash.com/random?landscape,night" alt="" />
+            </div>
+      
+             <!-- slide 4 -->
+            <div class="slide">
+              <img src="https://source.unsplash.com/random?landscape,city" alt="" />
+            </div>
+      
+             <!-- Control buttons -->
+            <button class="btn btn-next"> > </button>
+            <button class="btn btn-prev"> < </button>
+        </div>
+            <div class="cards">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper lacus vel nisi semper lobortis. Nunc iaculis aliquet est, ac lobortis risus mattis in. Morbi dolor elit, ullamcorper a ante nec, sodales eleifend elit. In risus mauris, congue sit amet mi id, congue eleifend nulla. Donec aliquam justo in est laoreet efficitur. Mauris id nunc vitae tellus volutpat vulputate. Aenean porta auctor ante id consequat. Aliquam a egestas dui. Suspendisse nulla enim, tristique malesuada quam ut, tincidunt ultricies purus. Aenean condimentum, mi eget commodo molestie, velit diam fermentum ante, non vulputate massa lacus a tellus. Quisque mattis non turpis sed tincidunt. Nam et quam in tellus fringilla aliquet.
+
+                    Sed quam massa, ultricies sit amet faucibus nec, ultricies ut tortor. Vivamus lorem tellus, dignissim a pharetra non, consequat ut nunc. Morbi maximus elementum tellus a ultrices. Nulla at metus a ipsum aliquam semper molestie at purus. Nunc sed fermentum est, non pharetra eros. Cras consectetur, arcu eget commodo lacinia, arcu massa sagittis ligula, venenatis condimentum est quam quis erat. Vivamus dictum mi erat, ut vulputate nibh ornare viverra. Curabitur in suscipit lectus, in feugiat urna. Aenean sit amet massa ex. Fusce ultrices augue ac ipsum pulvinar, sed venenatis metus ultricies. Etiam in tortor sit amet lacus viverra lacinia vitae vel massa.
+                    
+                    Nullam vehicula sem quis lacinia suscipit. Nunc id vestibulum enim. Praesent dignissim mollis porta. Proin consectetur augue mi, eget tincidunt sapien lacinia at. Proin aliquet vitae nulla et maximus. Pellentesque nisl augue, pretium id fermentum nec, maximus quis erat. Vestibulum tempus interdum dui, eu congue est facilisis id. Sed feugiat, quam nec venenatis eleifend, magna orci luctus tortor, eget viverra ex elit et dui. Cras vestibulum ultrices lacus, eu molestie eros interdum sit amet. Vestibulum ultrices blandit leo, ut scelerisque felis commodo eu. Sed sit amet eleifend ante.
+                    
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed sem lorem, commodo et ligula non, semper gravida justo. Mauris placerat lectus sed sapien hendrerit auctor. Phasellus ut lorem nec nisi aliquam vestibulum. In faucibus placerat condimentum. Cras tempor lectus felis, at fermentum urna vestibulum et. Nullam tristique dolor ullamcorper nunc convallis tincidunt. Donec rutrum lacinia aliquet. Curabitur non porta quam, sit amet placerat lorem. Quisque vitae tristique ipsum. Suspendisse et pretium augue. Phasellus feugiat dictum neque id euismod. Nulla vel pellentesque nulla. Morbi tincidunt libero quis mauris auctor, sit amet tincidunt mauris euismod.
+                    
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a hendrerit metus, dignissim ultrices leo. Nulla vitae ultrices nulla, eu vehicula enim. Sed semper ultricies purus. Nunc tristique odio nibh, et tincidunt metus fringilla sed. Duis hendrerit a ipsum ut consectetur. Praesent sit amet ligula eget augue mattis pulvinar tincidunt sagittis augue. Nulla vulputate eget erat nec dignissim.</p>
+            </div>
+    <footer class="footer">        
+        <div class="map">
+            <span>Localização</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.98858461134!2d-46.774590985099636!3d-23.532912984697003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50ab7feb4519%3A0x739f0ddb0439cf94!2sDigital%20House%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1654038624865!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <section>
-            <nav class="informação">
-                <p>Informação</p>
-                <a href="##">Quem Somos</a>
-                <a href="##">Nossos Parceiros</a>
-            </nav>
-        </section>
+        <div class="information">
+            <span>Informações</span>
+            <a href="#">Quem somos?</a>
+            <a href="#">Nossos Parceiros</a>
+        </div>
 
         <section>
             <nav class="redesSociais">
