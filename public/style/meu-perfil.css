@@ -1,0 +1,171 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+     text-decoration: none;
+}
+
+header{
+    height: 186px;
+    background-color: #00234B;
+}
+
+.navbar{
+    display: flex;    
+}
+
+.logo img{
+    width: 297px;
+    margin-top: 30px;
+    margin-left: 20px;   
+}
+
+.wrapper{
+    margin-left: 60px;
+}
+
+.nav-busca input{
+    width: 750px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.nav-busca button{
+    width: 50px;
+    height: 50px;
+    
+    
+}
+
+.nav-links{
+    margin-top: 25px;
+    margin-left: 10px;
+    
+}
+.nav-links a{
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #ADBBEE;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #00234B;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.btn-logar{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.btn-logar a{
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #ADBBEE;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #00234B;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.usuario{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;    
+}
+
+.usuario h2{
+    margin-top: 200px;
+    margin-bottom: 110px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #00234B; 
+ }
+
+.usuario span{
+   margin-top: 110px;
+   margin-bottom: 110px;
+   font-size: 30px;
+   font-weight: 700;
+   color: #00234B; 
+}
+
+
+.btn-usuario{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.btn-usuario a{
+    margin-top: 75px;
+    padding-top: 40px;
+    background-color: #00234B;
+    width: 345px;
+    height: 101px;
+    border-radius: 33px;
+    color: #ADBBEE;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.footer{
+    display: flex;
+    background-color: #00234B;
+    margin-top: 180px;
+}
+
+.localizacao{
+ display: flex;
+ flex-direction: column;
+ color: #ADBBEE;
+ margin-top: 15px;
+}
+
+.localizacao img{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 179px;
+    height: 112px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info a {
+    margin-top: 8px;
+    padding: 10px 0;
+    color: #ADBBEE;
+}
+
+.redes-sociais {
+   display: flex;
+   align-items: center;
+}
+.redes-sociais a img{
+    width: 166px;
+    height: 46px;
+    margin-right: 20px;
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contato span{
+    margin-top: 10px;
+    color: #ADBBEE;
+}
