@@ -10,7 +10,7 @@ header{
   width: 100%;
 }
 header img{
-  width: 90px;
+  width: 40%;
 }
 .navbar{
   display: flex;
@@ -66,7 +66,7 @@ header img{
   object-fit: cover;
 }
 
-.btn {
+.arrow {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -79,18 +79,41 @@ header img{
   font-size: 18px;
 }
 
-.btn:active {
+.arrow:active {
   transform: scale(1.1);
 }
 
-.btn-prev {
+.arrow-prev {
   top: 45%;
   left: 2%;
 }
 
-.btn-next {
+.arrow-next {
   top: 45%;
   right: 2%;
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  color: #fff;
+  background-color: #00234B;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
 }
 .footer{
   display:flex;
@@ -116,17 +139,55 @@ header img{
   width: 20rem;
   border-radius: 1rem;
 }
-.information{
+.footer{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem;
+  background-color: #00234B;
+  margin-top: 180px;
 }
 
-footer span{
-  font-weight: bold;
-  font-size: 1.3rem;
-  padding: .6rem;
-  margin-top: -2rem;
+.localizacao{
+display: flex;
+flex-direction: column;
+color: #ADBBEE;
+margin-top: 15px;
+}
+
+.localizacao img{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 179px;
+  height: 112px;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info a {
+  margin-top: 8px;
+  padding: 10px 0;
+  color: #ADBBEE;
+}
+
+.redes-sociais {
+ display: flex;
+ align-items: center;
+}
+.redes-sociais a img{
+  width: 166px;
+  height: 46px;
+  margin-right: 20px;
+}
+
+.contato{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contato span{
+  margin-top: 10px;
+  color: #ADBBEE;
 }

@@ -7,7 +7,7 @@ slides.forEach((slide, indx) => {
 });
 
 // select next slide button
-const nextSlide = document.querySelector(".btn-next");
+const nextSlide = document.querySelector(".arrow-next");
 
 // current slide counter
 let curSlide = 0;
@@ -30,7 +30,7 @@ nextSlide.addEventListener("click", function () {
 });
 
 // select prev slide button
-const prevSlide = document.querySelector(".btn-prev");
+const prevSlide = document.querySelector(".arrow-prev");
 
 // add event listener and navigation functionality
 prevSlide.addEventListener("click", function () {
