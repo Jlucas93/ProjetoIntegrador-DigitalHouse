@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body a {
+  text-decoration: none !important;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+}
+
+header img {
+  width: 90px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #00234B;
+  color: #fff;
+  height: 8vh;
+}
+
+.navbar a {
+  cursor: pointer;
+  padding: 10px;
+  margin: 2px;
+  color: #fff;
+}
+
+.navbar button {
+  cursor: pointer;
+  width: 2rem;
+  border-radius: 100%;
+}
+
+.navbar input {
+  height: 2rem;
+  width: 20rem;
+  border: 1px solid transparent;
+  border-radius: 25rem;
+  outline: none
+}
+
+.search img {
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.slide {
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
+
+/* css da main de cadastro */
+.cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+fieldset {
+  border-style: none;
+  padding: 10px;;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;  
+}
+
+form div {
+  padding: 10px;
+}
+
+.nome-completo input {
+  height: 30px;
+  background: #ADBBEE;
+  border: 1px solid #00234B;
+  border-radius: 15px;
+}
+
+
+.email-form input {
+  height: 30px;
+  background: #ADBBEE;
+  border: 1px solid #00234B;
+  border-radius: 15px;
+}
+
+
+
+.telefone input {
+  height: 30px;
+  background: #ADBBEE;
+  border: 1px solid #00234B;
+  border-radius: 15px;
+}
+
+
+.senha input {
+  height: 30px;
+  background: #ADBBEE;
+  border: 1px solid #00234B;
+  border-radius: 15px;
+}
+
+.checkbox-cadastro {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  margin-right: 200px;
+  padding-bottom: 50px;
+}
+.button-cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border-radius: 15px;
+
+}
+/* não consigo aplicar o css no button */
+/* final do css de cadastro */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 30vh;
+  margin-top: 10px;
+  background-color: #00234B;
+  color: #fff;
+  border: solid black 1px;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.map iframe {
+  height: 20vh;
+  width: 20rem;
+  border-radius: 1rem;
+}
+
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+footer span {
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: .6rem;
+  margin-top: -2rem;
+}
