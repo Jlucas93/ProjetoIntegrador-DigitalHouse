@@ -1,0 +1,205 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+     text-decoration: none;
+}
+
+header{
+    height: 186px;
+    background-color: #00234B;
+}
+
+/*Heder - Inicio*/
+.navbar{
+    display: flex;    
+}
+
+.logo img{
+    width: 297px;
+    margin-top: 30px;
+    margin-left: 20px;   
+}
+
+.wrapper{
+    margin-left: 160px;
+    margin-right: 170px;
+}
+
+.nav-busca input{
+    width: 750px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.nav-busca button{
+    width: 50px;
+    height: 50px;
+    
+    
+}
+
+.nav-links{
+    margin-top: 25px;
+    margin-left: 10px;
+    
+}
+.nav-links a{
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #ADBBEE;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #00234B;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.btn-logar{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.btn-logar a{
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #ADBBEE;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #00234B;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*Heder - Fim*/
+
+.card-pedido{
+    margin-bottom: 60px;
+}
+.btn-usuario{
+    text-align: center;
+    margin-top: 100px;
+       
+}
+.btn-usuario a{
+    margin: 130px;
+    justify-content: space-evenly;
+    background-color: #00234B;
+    color: #FFFFFF;
+    padding: 15px 45px;
+    border-radius: 33px;
+    font-weight: bold; 
+}
+
+.wrapper h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    font-size: 26px;
+    font-weight:bold;
+}
+
+.card-wrapper{
+    display: flex;
+    align-items: center;
+    background-color: #00234B;
+    border-radius: 63px;
+}
+
+.card-img img{
+    width: 121px;
+    height: 161px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.card-descricao{
+    display: flex;
+    flex-direction: column;
+    color: #ADBBEE;
+}
+
+.card-descricao div{
+    margin-top: 15px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.card-btn{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card-btn a{
+    margin: 10px;
+    padding: 15px 30px;
+    border-radius: 33px;
+    font-weight: bold;
+    background-color: #ADBBEE;
+    color: #00234B;
+}
+
+
+/*Footer - Inicio*/
+.footer{
+    display: flex;
+    background-color: #00234B;
+    margin-top: 180px;
+}
+
+.localizacao{
+ display: flex;
+ flex-direction: column;
+ color: #ADBBEE;
+ margin-top: 15px;
+}
+
+.localizacao img{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 179px;
+    height: 112px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info a {
+    margin-top: 8px;
+    padding: 10px 0;
+    color: #ADBBEE;
+}
+
+.redes-sociais {
+   display: flex;
+   align-items: center;
+}
+.redes-sociais a img{
+    width: 166px;
+    height: 46px;
+    margin-right: 20px;
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contato span{
+    margin-top: 10px;
+    color: #ADBBEE;
+}
+/*Footer - Fim*/
