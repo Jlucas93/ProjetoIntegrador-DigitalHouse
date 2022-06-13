@@ -118,54 +118,73 @@ header{
 }
 
 .footer{
-    display: flex;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 30vh;
+    margin-top: 10px;
     background-color: #00234B;
-    margin-top: 180px;
-}
-
-.localizacao{
- display: flex;
- flex-direction: column;
- color: #ADBBEE;
- margin-top: 15px;
-}
-
-.localizacao img{
+    color: #fff;
+    border: solid black 1px; 
+  }
+  
+  .map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .map iframe{
+    height: 20vh;
+    width: 20rem;
+    border-radius: 1rem;
+  }
+  
+  .localizacao{
+  display: flex;
+  flex-direction: column;
+  color: #ADBBEE;
+  margin-top: 15px;
+  }
+  
+  .localizacao img{
     margin-top: 15px;
     margin-bottom: 15px;
     width: 179px;
     height: 112px;
-}
-
-.info{
+  }
+  
+  .info{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.info a {
+  }
+  
+  .info a {
     margin-top: 8px;
     padding: 10px 0;
     color: #ADBBEE;
-}
-
-.redes-sociais {
+  }
+  
+  .redes-sociais {
    display: flex;
    align-items: center;
-}
-.redes-sociais a img{
+  }
+  .redes-sociais a img{
     width: 166px;
     height: 46px;
     margin-right: 20px;
-}
-
-.contato{
+  }
+  
+  .contato{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.contato span{
+  }
+  
+  .contato span{
     margin-top: 10px;
     color: #ADBBEE;
-}
+  }

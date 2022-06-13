@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/historico-pedido.css">
+    <link rel="stylesheet" href="css/historico.css">
     <title>Histórico de Pedidos</title>
 </head>
 
@@ -14,12 +14,12 @@
         <!-- Inicio Header -->
         <nav class="navbar">
             <div class="logo">
-                <img src="../public/img/logo-menor.png" alt="Logo" />
+                <img src="img/logo-menor.png" alt="Logo" />
             </div>
             <div class="wrapper">
                 <div class="nav-busca">
                     <input type="text" placeholder="  Busque aqui!">
-                    <button type="submit"><img src="../public/img/seacrh-icon.png" alt="Imagem de uma Lupa"></button>
+                    <button type="submit"><img src="img/seacrh-icon.png" alt="Imagem de uma Lupa"></button>
                 </div>
                 <div class="nav-links">
                     <a href="#">Masculino</a>
@@ -39,14 +39,14 @@
         <div class="wrapper">
             <div class="btn-usuario">
                 <a href="#">Meus Endereços</a>
-                <a href="../public/meu-perfil.html">Meu Perfil</a>
+                <a href="#">Meu Perfil</a>
             </div>
             <h2>Histório de Pedidos</h2>
             <div class="ultimos-pedidos">
                 <div class="card-pedido">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <img src="../public/img/blusao.png" alt="">
+                            <img src="img/blusao.png" alt="">
                         </div>
                         <div class="card-descricao">
                             <div><span class="bold">Pedido: </span><span>0001</span></div>
@@ -65,7 +65,7 @@
                 <div class="card-pedido">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <img src="../public/img/blusao-preto.png" alt="">
+                            <img src="img/blusao-preto.png" alt="">
                         </div>
                         <div class="card-descricao">
                             <div><span class="bold">Pedido: </span><span>0002</span></div>
@@ -84,7 +84,7 @@
                 <div class="card-pedido">
                     <div class="card-wrapper">
                         <div class="card-img">
-                            <img src="../public/img/blusão 3.png" alt="">
+                            <img src="img/blusão 3.png" alt="">
                         </div>
                         <div class="card-descricao">
                             <div><span class="bold">Pedido: </span><span>0003</span></div>
@@ -103,29 +103,7 @@
         </div>
     </main> <!-- Fim Main -->
 
-    <footer class="footer">
-        <!-- inicio Footer -->
-        <div class="localizacao">
-            <span>Localização</span>
-            <img src="../public/img/mapa.jpg" alt="Mapa Localização">
-        </div>
-        <div class="info">
-            <a href="#">Informações</a>
-            <a href="#">Quem Somos</a>
-            <a href="#">Nossos parceiros</a>
-        </div>
-        <div class="redes-sociais">
-            <a href="#"><img src="../public/img/icone-whats.png" alt="icone-whatsapp"></a>
-            <a href="#"><img src="../public/img/icone-face.png" alt="icone-facebook"></a>
-            <a href="#"><img src="../public/img/icone-insta.png" alt="icone-instagram"></a>
-            <a href="#"><img src="../public/img/icone-lkd.png" alt="icone-linkedin"></a>
-        </div>
-
-        <div class="contato">
-            <span>Email: email@dominio.com</span>
-            <span>Telefone: (99)99999-9999</span>
-        </div>
-    </footer><!-- Fim Footer -->
+   <%- include('./partials/footer')%>
 </body>
 
 </html>

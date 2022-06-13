@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <!-- inicio do cadastro -->
+    <div class="cadastro">
+        <h2>Cadastre-se</h2>
+        <p>Preencha seus dados abaixo</p>
+    </div>
+
+    <section>
+        <form class="form">
+            <!-- <fieldset> -->
+
+                <div class="nome-completo">
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome">
+                    
+                    <label for="nome">Sobrenome: </label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+
+                <div class="email-form">
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email">
+                </div>
+
+                <div class="telefone">
+                    <label for="telefone">Telefone: </label>
+                    <input type="type" nome="telefone" id="telefone">
+
+                    <label for="telefone">Telefone 2: </label>
+                    <input type="type" nome="telefone" id="telefone">
+                </div>
+
+                <div class="senha">
+                    <label for="senha">Senha: </label>
+                    <input type="password" name="senha" id="senha">
+
+                    <label for="senha">Repita a Senha: </label>
+                    <input type="password" name="senha" id="senha">
+                </div>
+
+           <!--  </fieldset> -->
+        </form>
+
+        <div class="checkbox-cadastro">
+            <input type="checkbox" name="termos">
+        <label for="termos">Li e concordo com os termos de uso</label>
+        </div>
+
+        <div class="button-cadastro">
+            <button type="submit">Cadastre-se</button>
+        </div>
+        
+    </section>
+    
+    <!-- final do cadastro -->
+    <%- include('./partials/footer') %>
+</body>
+
+</html>

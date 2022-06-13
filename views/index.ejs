@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script defer src="script/index.js"></script>
+    <title>HomePage</title>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <div class=slider>
+        <!-- slide 1 -->
+        <div class="slide">
+            <img src="https://source.unsplash.com/random?landscape,mountain" alt="" />
+        </div>
+
+        <!-- slide 2 -->
+        <div class="slide">
+            <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
+        </div>
+
+        <!-- slide 3 -->
+        <div class="slide">
+            <img src="https://source.unsplash.com/random?landscape,night" alt="" />
+        </div>
+
+        <!-- slide 4 -->
+        <div class="slide">
+            <img src="https://source.unsplash.com/random?landscape,city" alt="" />
+        </div>
+
+        <!-- Control buttons -->
+        <button class="arrow arrow-next"> > </button>
+        <button class="arrow arrow-prev">
+            < </button>
+    </div>
+    <section class="cards">
+        <div class="card">
+            <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Camisa Branca</b></h4>
+                <p>Valor: R$ 70,00</p>
+                <p>Tamanho M</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Camisa Branca</b></h4>
+                <p>Valor R$ 70,00</p>
+                <p>Tamanho <b>M</b></p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>Camisa Branca</b></h4>
+                <p>Valor R$ 70,00</p>
+                <p>Tamanho M</p>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./partials/footer') %>
+</body>
+
+</html>
