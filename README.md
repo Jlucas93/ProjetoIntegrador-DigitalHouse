@@ -23,9 +23,10 @@ Este é projeto integradar do curso web fullstack da DigitalHouse, com o intuito
 
 ## Tecnologias:
 
-<p>HTML</p>
-<p>CSS</p>
-<p>JavaScript</p>
+<p>EJS</p>
+<p>Node.JS</p>
+<p>MySQL</p>
+<p>Express</p>
 
 ## Comandos Git:
 ````
