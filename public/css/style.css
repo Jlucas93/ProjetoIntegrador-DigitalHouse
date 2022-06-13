@@ -186,3 +186,14 @@ margin-top: 15px;
   margin-top: 10px;
   color: #ADBBEE;
 }
+
+.not-found{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.img-error img{
+  width: 100%;
+}
