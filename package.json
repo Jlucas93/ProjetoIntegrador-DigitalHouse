@@ -4,6 +4,7 @@
   "description": "Este é projeto integradar do curso web fullstack da DigitalHouse, com o intuito de criar um e-commerce de roupas e acessórios.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,8 +25,11 @@
     "express-validator": "^6.14.1",
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
-    "nodemon": "^2.0.16",
     "uuid": "^8.3.2"
   },
-  "homepage": "https://github.com/Jlucas93/PI#readme"
+  "homepage": "https://github.com/Jlucas93/PI#readme",
+
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
