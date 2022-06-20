@@ -14,6 +14,9 @@ const homeController = {
     },
     historico: (req, res, next) => {
         res.render('historico')
+    },
+    carrinho: (req, res, next) => {
+        res.render('carrinho')
     }
 
 }
