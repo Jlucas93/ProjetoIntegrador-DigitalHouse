@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/meus-enderecos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Meus Endereços</title>
+</head>
+
+<body>
+    <header>
+        <!-- Inicio Header -->
+        <nav class=".flex-fill navbar">
+            <div class="logo">
+                <img src="../public/img/logo-menor.png" alt="Logo" />
+            </div>
+            <div class="wrapper">
+                <div class="nav-busca">
+                    <input type="text" placeholder="  Busque aqui!">
+                    <button type="submit"><img src="../public/img/seacrh-icon.png" alt="Imagem de uma Lupa"></button>
+                </div>
+                <div class="nav-links">
+                    <a href="#">Masculino</a>
+                    <a href="#">Feminino</a>
+                    <a href="#">Acessórios</a>
+                    <a href="#">Calçados</a>
+                </div>
+            </div>
+            <div class="btn-logar">
+                <a href="#">Acesse sua Conta</a>
+            </div>
+        </nav>
+    </header> <!-- Fim Header -->
+
+    <main>
+        <!-- Inicio Main -->
+
+        <div class="btn-usuario">
+            <a href="../public/historico-pedido.html">Meus Pedidos</a>
+            <a href="../public/meu-perfil.html">Meu Perfil</a>
+        </div>
+        <h2>Meus Endereços</h2>
+
+        <div class="container-enderecos">
+            <div class="container-endereco">
+                <div class="box-endereco">
+                    <div class="id-endereco">
+                        <span class="bold">Identificação do Endereço:</span> <span> Casa </span>
+                    </div>
+                    <div class="logradouro-numero">
+                        <span class="bold">Logradouro: </span> <span>Rua da Consolação</span>
+                        <div></div> <span class="bold">Número:</span> <span>1376</span>
+                    </div>
+                    <div class="complemento-bairro">
+                        <span class="bold">Complemento: </span> <span> Apto 78 </span>
+                        <div></div> <span class="bold">Bairro: </span> <span>Consolação</span>
+                    </div>
+                    <div class="cidade-cep">
+                        <span class="bold">Cidade: </span> <span>São Paulo</span>
+                        <div></div> <span class="bold">UF: </span> <span>SP</span>
+                        <div></div> <span class="bold">CEP: </span> <span>01302-001</span>
+                    </div>
+                    <div class="destinatario-telefone">
+                        <span class="bold">Destinatário: </span> <span>João Paulo</span>
+                        <div></div> <span class="bold">Telefone: </span> <span> (11) 94828-2764</span>
+                    </div>
+                </div>
+                <div class="btn-endereco">
+                    <a href="#">Editar</a>
+                    <a href="#">Excluir</a>
+                </div>
+            </div>
+            <div class="container-endereco">
+                <div class="box-endereco">
+                    <div class="id-endereco">
+                        <span class="bold">Identificação do Endereço: </span> <span> Casa </span>
+                    </div>
+                    <div class="logradouro-numero">
+                        <span class="bold">Logradouro: </span> <span>Rua da Consolação</span>
+                        <div></div> <span class="bold">Número:</span> <span>1376</span>
+                    </div>
+                    <div class="complemento-bairro">
+                        <span class="bold">Complemento: </span> <span> Apto 78 </span>
+                        <div></div> <span class="bold">Bairro: </span> <span>Consolação</span>
+                    </div>
+                    <div class="cidade-cep">
+                        <span class="bold">Cidade: </span> <span>São Paulo</span>
+                        <div></div> <span class="bold">UF: </span> <span>SP</span>
+                        <div></div> <span class="bold">CEP: </span> <span>01302-001</span>
+                    </div>
+                    <div class="destinatario-telefone">
+                        <span class="bold">Destinatário: </span> <span>João Paulo</span>
+                        <div></div> <span class="bold">Telefone: </span> <span> (11) 94828-2764</span>
+                    </div>
+                </div>
+                <div class="btn-endereco">
+                    <a href="#">Editar</a>
+                    <a href="#">Excluir</a>
+                </div>
+            </div>
+        </div>
+        <h3>Cadastrar novo endereço</h3>
+        <div class="container-form">
+            <form action="">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Identificação do endereço">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="CEP">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Logradouro">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" placeholder="Número">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Complemento">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Bairro">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Cidade">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="UF">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Destinatário">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Telefone">
+                    </div>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+        </div>
+    </main> <!-- Fim Main -->
+
+    <footer class="footer">
+        <!-- inicio Footer -->
+        <div class="localizacao">
+            <span>Localização</span>
+            <img src="../public/img/mapa.jpg" alt="Mapa Localização">
+        </div>
+        <div class="info">
+            <a href="#">Informações</a>
+            <a href="#">Quem Somos</a>
+            <a href="#">Nossos parceiros</a>
+        </div>
+        <div class="redes-sociais">
+            <a href="#"><img src="../public/img/icone-whats.png" alt="icone-whatsapp"></a>
+            <a href="#"><img src="../public/img/icone-face.png" alt="icone-facebook"></a>
+            <a href="#"><img src="../public/img/icone-insta.png" alt="icone-instagram"></a>
+            <a href="#"><img src="../public/img/icone-lkd.png" alt="icone-linkedin"></a>
+        </div>
+
+        <div class="contato">
+            <span>Email: email@dominio.com</span>
+            <span>Telefone: (99)99999-9999</span>
+        </div>
+    </footer><!-- Fim Footer -->
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+     text-decoration: none;
+}
+
+header{
+    height: 186px;
+    background-color: #00234B;
+}
+
+/*Heder - Inicio*/
+.navbar{
+    display: flex;
+ 
+}
+
+.logo img{
+    width: 297px;
+    margin-top: 30px;
+    margin-left: 20px;   
+}
+
+
+
+.nav-busca input{
+    width: 750px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.nav-busca button{
+    width: 50px;
+    height: 50px;
+    
+    
+}
+
+.nav-links{
+    margin-top: 25px;
+    margin-left: 10px;
+    
+}
+.nav-links a{
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #ADBBEE;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #00234B;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.btn-logar{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.btn-logar a{
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #ADBBEE;
+    padding: 10px 30px;
+    border-radius: 50px;
+    color: #00234B;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*Heder - Fim*/
+
+h2{
+    padding-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+h3{
+    text-align: center;
+    text-transform: uppercase; 
+    padding-top: 130px;
+    
+}
+.btn-usuario{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;       
+}
+
+.btn-usuario a{
+    margin: 130px;
+    justify-content: space-evenly;
+    background-color: #00234B;
+    color: #ADBBEE;
+    padding: 15px 45px;
+    border-radius: 33px;
+    font-weight: bold; 
+}
+
+.container-enderecos{
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.container-endereco{  
+    margin-top: 70px; 
+    border: 1px solid black;
+    border-radius: 18px;
+    width: 45%;
+    text-align: center;
+    padding: 10px;
+}
+
+.box-endereco{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+   
+}
+
+.id-endereco, .logradouro-numero, .complemento-bairro, .cidade-cep, .destinatario-telefone {
+    display: flex;
+   
+    padding: 8px;
+}
+
+.logradouro-numero div{
+    margin-right: 25px  
+}
+.complemento-bairro div{
+    margin-right: 25px 
+}
+.cidade-cep div{
+    margin-right: 25px    
+}
+.destinatario-telefone div{
+    margin-right: 25px    
+}
+
+.bold{
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+
+.btn-endereco{
+    margin:15px;
+}
+.btn-endereco a{
+    background-color: #00234B;
+    color: #ADBBEE;
+    padding: 8px 20px;
+    border-radius: 33px;
+    font-weight:500;
+    margin: 10px; 
+}
+
+
+.container-form{
+    max-width: 60%;
+}
+
+.form-row{
+    margin-top: 40px;
+}
+
+button.btn{
+    margin-top: 60px;
+    margin-left: 44%;
+    background-color: #00234B;
+    color: #ADBBEE;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 17px;
+}
+
+input.form-control{
+    border-radius: 35px;
+}
+
+.footer{
+    display: flex;
+    background-color: #00234B;
+    margin-top: 180px;
+}
+
+.localizacao{
+ display: flex;
+ flex-direction: column;
+ color: #ADBBEE;
+ margin-top: 15px;
+}
+
+.localizacao img{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 179px;
+    height: 112px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info a {
+    margin-top: 8px;
+    padding: 10px 0;
+    color: #ADBBEE;
+}
+
+.redes-sociais {
+   display: flex;
+   align-items: center;
+}
+.redes-sociais a img{
+    width: 166px;
+    height: 46px;
+    margin-right: 20px;
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contato span{
+    margin-top: 10px;
+    color: #ADBBEE;
+}
+/*Footer - Fim*/
+
+
+
+div.row{
+    margin: 0 50px;
+}
