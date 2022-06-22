@@ -197,3 +197,9 @@ margin-top: 15px;
 .img-error img{
   width: 100%;
 }
+@media ( max-width: 500px){
+  .login-form .box{
+      min-width: 100%;
+      padding: 30px;
+  }
+}

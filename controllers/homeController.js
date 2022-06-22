@@ -17,6 +17,9 @@ const homeController = {
     },
     carrinho: (req, res, next) => {
         res.render('carrinho')
+    },
+    produtos: (req, res, next) => {
+        res.render('produtos')
     }
 
 }

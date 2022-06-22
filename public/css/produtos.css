@@ -1,0 +1,119 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.menu-bar {
+    background:  #00234B;
+    text-align: center;
+}
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+.active, .menu-bar ul li:hover {
+    background: #5240e1;
+    border-radius: 15px;
+}
+.sub-menu-1 {
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background:  #00234B;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.product-filter {
+    display: block;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+    
+}
+.product-filter h1 {
+    flex-grow: 1;
+}
+.sort {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+}
+.collection-sort {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-card {
+    display: flex;
+	flex-direction: column;
+	padding: 2%;
+	flex: 1 16%;
+	background-color: rgb(241, 244, 250);
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+.product-image img {
+    max-width: 100%;
+}
+.product-info {
+    margin-top: auto;
+}
+
+@media ( max-width: 600px ) {
+	
+	.product-card {
+		flex: 1 46%;
+	}
+}
+@media ( max-width: 480px ) { h1{
+	margin-bottom: 20px;
+}
+	
+.product-filter {
+	flex-direction: column;
+}
+	
+.sort {
+	align-self: flex-start;
+}
+}
+
+
+
