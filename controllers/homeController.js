@@ -1,3 +1,5 @@
+const Produto = require("../Models/produto")
+const fs = require("fs")
 
 const homeController = {
     index: (req, res, next) => {
