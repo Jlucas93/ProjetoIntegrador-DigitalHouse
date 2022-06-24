@@ -1,0 +1,19 @@
+{
+    "produtos":
+     [
+        {
+            "id":"1",
+            "nome":"camisa",
+            "preco": "70.00",
+            "imagem": "img/camisa_1",
+            "estoque": true
+
+        }
+    ],
+    "usuarios":
+    [
+        {
+            
+        }
+    ]
+}
