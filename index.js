@@ -1,5 +1,6 @@
 const express = require('express');
 const homeRouter = require('./routes/home')
+const session = require('express-session')
 
 const port = 3001
 const app = express();
@@ -19,7 +20,6 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false
 }))//Iniciando uma sessao
-
 
 //Routas
 app.use(homeRouter)

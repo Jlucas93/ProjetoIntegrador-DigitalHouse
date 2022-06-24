@@ -1,71 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script defer src="script/index.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <title>HomePage</title>
 </head>
 
 <body>
     <%- include('./partials/header') %>
 
-    <div class=slider>
-        <!-- slide 1 -->
-        <div class="slide">
-            <img src="https://source.unsplash.com/random?landscape,mountain" alt="" />
-        </div>
-
-        <!-- slide 2 -->
-        <div class="slide">
-            <img src="https://source.unsplash.com/random?landscape,cars" alt="" />
-        </div>
-
-        <!-- slide 3 -->
-        <div class="slide">
-            <img src="https://source.unsplash.com/random?landscape,night" alt="" />
-        </div>
-
-        <!-- slide 4 -->
-        <div class="slide">
-            <img src="https://source.unsplash.com/random?landscape,city" alt="" />
-        </div>
-
-        <!-- Control buttons -->
-        <button class="arrow arrow-next"> > </button>
-        <button class="arrow arrow-prev">
-            < </button>
-    </div>
-    <section class="cards">
-        <div class="card">
-            <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Camisa Branca</b></h4>
-                <p>Valor: R$ 70,00</p>
-                <p>Tamanho M</p>
+        <main>
+            <!-- Carousel-->
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""
+                        aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+                        class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="img/blusao-preto.png"
+                         class="d-block w-100" alt="...">
+                        <div class="container">
+                            <div class="carousel-caption text-start">
+                                <h1>Example headline.</h1>
+                                <p>Some representative placeholder content for the first slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item active">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#777"></rect>
+                        </svg>
+        
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Another example headline.</h1>
+                                <p>Some representative placeholder content for the second slide of the carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#777"></rect>
+                        </svg>
+        
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>One more for good measure.</h1>
+                                <p>Some representative placeholder content for the third slide of this carousel.</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        </div>
-        <div class="card">
-            <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Camisa Branca</b></h4>
-                <p>Valor R$ 70,00</p>
-                <p>Tamanho <b>M</b></p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
-            <div class="container">
-                <h4><b>Camisa Branca</b></h4>
-                <p>Valor R$ 70,00</p>
-                <p>Tamanho M</p>
-            </div>
-        </div>
-    </section>
+            <section class="cards">
+                <div class="card">
+                    <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Camisa Branca</b></h4>
+                        <p>Valor: R$ 70,00</p>
+                        <p>Tamanho M</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Camisa Branca</b></h4>
+                        <p>Valor R$ 70,00</p>
+                        <p>Tamanho <b>M</b></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/camisa_1.jpeg" alt="Avatar" style="width:100%">
+                    <div class="container-card">
+                        <h4><b>Camisa Branca</b></h4>
+                        <p>Valor R$ 70,00</p>
+                        <p>Tamanho M</p>
+                    </div>
+                </div>
+            </section>
 
-    <%- include('./partials/footer') %>
+        </main>
+        <%- include('./partials/footer') %>
+
+            <script>
+                const myCarouselElement = document.querySelector('#myCarousel')
+                const carousel = new bootstrap.Carousel(myCarouselElement, {
+                    interval: 2000,
+                    wrap: true
+                })
+            </script>
 </body>
 
 </html>
