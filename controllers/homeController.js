@@ -3,7 +3,8 @@ const fs = require("fs")
 
 const homeController = {
     index: (req, res, next) => {
-        res.render('index')
+        const produtos = Produto.findAll()
+        res.render('index', { produtos })
     },
     cadastro: (req, res, next) => {
         res.render('cadastro')

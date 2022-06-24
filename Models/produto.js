@@ -29,3 +29,5 @@ const Produto = {
         store(db)
     }
 }
+
+module.exports = Produto
