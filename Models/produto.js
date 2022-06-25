@@ -3,30 +3,30 @@ const { v4: geradorDeId } = require('uuid')
 
 function open() {
     let content = fs.readFileSync("./db.json", "utf8")
-    const db = JSON.parse(content); // de texto json para js
-    return db
+    const dataBase = JSON.parse(content); // de texto json para js
+    return dataBase
 }
 
-function store(db) {
-    content = JSON.stringify(db); // de js para texto json
+function store(dataBase) {
+    let content = JSON.stringify(dataBase); // de js para texto json
     fs.writeFileSync("./db.json", content, "utf8")
 }
 
 const Produto = {
     findAll: () => {
-        const db = open()
-        return db.produtos
+        const dataBase = open()
+        return dataBase.produtos
     },
     findById: (id) => {
-        const db = open()
-        const produto = db.produtos.find(produto => produto.id === id)
+        const dataBase = open()
+        const produto = dataBase.produtos.find(produto => produto.id === id)
         return produto
     },
     save: (produto) => {
-        const db = open()
+        const dataBase = open()
         produto.id = geradorDeId()
-        db.produto.push(produto)
-        store(db)
+        dataBase.produtos.push(produto)
+        store(dataBase)
     }
 }
 
