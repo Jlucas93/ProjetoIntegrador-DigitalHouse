@@ -2,7 +2,7 @@ body {
   color: #5a5a5a;
 }
 main {
-  margin-top: 72px;
+  margin-top: 10rem;
 }
 
 #header{
@@ -154,9 +154,17 @@ footer a{
   max-width: 80%;
 }
 
+section.produtos h1 {
+  color: #00234B;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+
 @media (max-width: 500px) {
   .login-form .box {
     min-width: 100%;
     padding: 30px;
   }
 }
+

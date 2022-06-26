@@ -1,5 +1,6 @@
 const express = require('express');
 const homeRouter = require('./routes/home')
+const admRouter = require('./routes/adm')
 const session = require('express-session')
 
 const port = 3001
@@ -23,6 +24,7 @@ app.use(session({
 
 //Routas
 app.use(homeRouter)
+app.use(admRouter)
 
 //Para páginas não encontradas
 app.use((_req, res, _next) => {
