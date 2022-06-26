@@ -9,7 +9,6 @@ const admController = {
     postPorduto: (req, res) => {
         const {
             nome,
-            imagem,
             tamnhoP,
             tamanhoM,
             tamanhoG,
