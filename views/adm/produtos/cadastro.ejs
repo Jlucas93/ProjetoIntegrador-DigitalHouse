@@ -17,34 +17,34 @@
             <section class="produtos">
                 <div class="container">
                     <h1>Cadastrar novo Produto</h1>
-                    <a href="/adm" class="btn btn-primary mb-2">ADM </a>
-                    <form method="POST" action="/adm/servicos" enctype="multipart/form-data">
+                    <a href="/adm" class="btn btn-primary mb-2">Voltar </a>
+                    <form method="POST" action="/adm/produtos/cadastro" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="" class="form-label">Imagem</label>
                             <input type="file" name="imagem" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Nome</label>
-                            <input type="text" name="nome" class="form-control">
+                            <input type="text" name="nome" class="form-control" required>
                         </div>
                         <span>Tamanho</span>
                         <div class="mb-3">
-                            <input name="P" type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" name="estoque" for="exampleCheck1">P</label>
+                            <input name="tamanhoP" type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" name="tamanhoP" for="exampleCheck1">P</label>
 
-                            <input name="M" type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" name="estoque" for="exampleCheck1">M</label>
+                            <input name="tamanhoM" type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" name="tamanhoM" for="exampleCheck1">M</label>
 
 
-                            <input name="G" type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" name="estoque" for="exampleCheck1">G</label>
+                            <input name="tamanhoG" type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" name="tamanhoG" for="exampleCheck1">G</label>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Preço</label>
-                            <input type="number" name="preco" class="form-control">
+                            <input type="number" name="preco" class="form-control" required>
                         </div>
                         <div class="mb-3 form-check">
-                            <input name="ativo" type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <input name="estoque" type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" name="estoque" for="exampleCheck1">Em estoque</label>
                         </div>
 

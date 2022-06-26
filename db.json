@@ -1,38 +1,42 @@
 {
-    "produtos":
-     [
+    "produtos": [
         {
-            "id":"1",
-            "nome":"camisa",
+            "id": "1",
+            "nome": "camisa",
             "preco": "70.00",
             "imagem": "img/camisa_1.jpeg",
             "tamanho": "M",
             "estoque": true
-
         },
         {
-            "id":"2",
-            "nome":"Calça",
+            "id": "2",
+            "nome": "Calça",
             "preco": "120.00",
             "imagem": "img/blusao.png",
             "tamanho": "G",
             "estoque": true
-
         },
         {
-            "id":"3",
-            "nome":"camisa",
+            "id": "3",
+            "nome": "camisa",
             "preco": "70.00",
             "imagem": "img/camisa_1.jpeg",
             "tamanho": "P",
             "estoque": true
-
+        },
+        {
+            "nome": "Camisa azul",
+            "imagem": "img/produtoExibicao/1656274840114-teste.jpg",
+            "tamanhoP": false,
+            "tamanhoM": "M",
+            "tamanhoG": "G",
+            "preco": "85",
+            "estoque": true,
+            "descricao": "Camisa de cor azul, confortável, ótima oportunidade ",
+            "id": "99c427b5-33a2-4fe9-a789-b5e514f0668d"
         }
     ],
-    "usuarios":
-    [
-        {
-            
-        }
+    "usuarios": [
+        {}
     ]
 }

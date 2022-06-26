@@ -77,19 +77,18 @@
             </div>
 
             <section class="cards">
-
             <% for(let produto of produtos) {%>
                 <div class="card">
                     <img src="<%=produto.imagem%>" alt="Avatar" style="width:100%">
                     <div class="container">
                         <h4><b>Camisa Branca</b></h4>
-                        <p>Valor: <%= produto.preco%></p>
-                        <p>Tamanho <%= produto.tamanho%></p>
+                        <p>Valor: R$<%= produto.preco%></p>
+                        <p>Descricao: <%= produto.descricao%></p>
+                        <p><%= produto.estoque%></p>
                     </div>
                 </div>                
                 <%}%>
             </section>
-
         </main>
         <%- include('./partials/footer') %>
 
