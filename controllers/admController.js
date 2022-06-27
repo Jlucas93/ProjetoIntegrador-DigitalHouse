@@ -1,4 +1,5 @@
 const Produto = require('../Models/produto')
+
 const admController = {
     index: (req, res) => {
         res.render('adm')
@@ -9,7 +10,7 @@ const admController = {
     postPorduto: (req, res) => {
         const {
             nome,
-            tamnhoP,
+            tamanhoP,
             tamanhoM,
             tamanhoG,
             preco,
@@ -21,9 +22,9 @@ const admController = {
         const produto = {
             nome,
             imagem: 'img/produtoExibicao/' + req.file.filename,
-            tamanhoP: (tamnhoP ? 'P' : false),
-            tamanhoM: (tamanhoM ? 'M' : false),
-            tamanhoG: (tamanhoG ? 'G' : false),
+            tamanhoP: !!tamanhoP,
+            tamanhoM: !!tamanhoM,
+            tamanhoG: !!tamanhoG,
             preco,
             estoque: (estoque ? 'Em estoque' : 'Sem estoque'),
             descricao
