@@ -3,7 +3,7 @@ const homeRouter = require('./routes/home')
 const admRouter = require('./routes/adm')
 const session = require('express-session')
 
-const port = 3001
+const port = 3000
 const app = express();
 const methodOverride = require('method-override');
 
