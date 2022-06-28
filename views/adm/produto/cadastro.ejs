@@ -18,10 +18,10 @@
                 <div class="container">
                     <h1>Cadastrar novo Produto</h1>
                     <a href="/adm" class="btn btn-primary mb-2">Voltar </a>
-                    <form method="POST" action="/adm/produtos/cadastro" enctype="multipart/form-data">
+                    <form method="POST" action="/adm/produto/cadastro" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="" class="form-label">Imagem</label>
-                            <input type="file" name="imagem" class="form-control">
+                            <input type="file" name="imagem" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Nome</label>
@@ -58,7 +58,7 @@
                 </div>
             </section>
         </main>
-        <%- include('../../partials/adm/footer.ejs') %>
+        <%- include('../../partials/footer.ejs') %>
 </body>
 
 </html>

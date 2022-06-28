@@ -12,27 +12,26 @@ function store(dataBase) {
     fs.writeFileSync("./db.json", content, "utf8")
 }
 
-const Produto = {
+const Usuario = {
     findAll: () => {
         const dataBase = open()
-        return dataBase.produtos
+        return dataBase.usuarios
     },
     findById: (id) => {
         const dataBase = open()
-        const produto = dataBase.produtos.find(produto => produto.id === id)
-        return produto
+        const usuario = dataBase.usuarios.find(usuario => usuario.id === id)
+        return usuario
     },
     findByEmail: (email) => {
         const dataBase = open()
         const user = dataBase.usuarios.find(user => user.email === email)
         return user
     },
-    save: (produto) => {
+    save: (usuario) => {
         const dataBase = open()
-        produto.id = geradorDeId()
-        dataBase.produtos.push(produto)
+        usuario.id = geradorDeId()
+        dataBase.usuarios.push(usuario)
         store(dataBase)
     }
 }
-
-module.exports = Produto
+module.exports = Usuario

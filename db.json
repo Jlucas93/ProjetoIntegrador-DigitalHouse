@@ -37,6 +37,13 @@
         }
     ],
     "usuarios": [
-        {}
+        {
+            "nome": "João Lucas",
+            "sobrenome": "Nascimento Andrade",
+            "email": "lucas@admin.com",
+            "senha": "$2b$10$amXk.Rqcvev2Enz8FKXuzur9Zp/OSYtK61NFlobEljVsvPnTaNXDC",
+            "admin": true,
+            "id": "6ee7bb21-7c76-422d-ac80-141e649e6ab6"
+        }
     ]
 }

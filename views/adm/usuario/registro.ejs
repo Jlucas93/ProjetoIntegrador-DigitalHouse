@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>ADM</title>
+</head>
+
+<body>
+    <%- include('../../partials/adm/header.ejs') %>
+        <main>
+            <section class="produtos">
+                <div class="container">
+                    <h1>Cadastrar novo Usuário</h1>
+                    <a href="/adm" class="btn btn-primary mb-2">Voltar </a>
+                    <form method="POST" action="/adm/usuario/registro">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome"
+                              value="<%=locals.old && old.nome%>">
+                          </div>
+                          <div class="mb-3">
+                            <label for="sobrenome" class="form-label">Sobrenome</label>
+                            <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome"
+                              value="<%=locals.old && old.sobrenome%>">
+                          </div>
+              
+                          <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="seuemail@exemplo.com"
+                            value="<%= locals.old && old.email%>">
+                          </div>
+              
+                          <div class="mb-3">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" name="senha" id="senha" class="form-control" placeholder="********">
+                          </div>
+              
+                          <div class="mb-3">
+                            <label for="confirmacaoSenha" class="form-label">Confirmação da Senha</label>
+                            <input type="password" name="confirmacaoSenha" id="senha" class="form-control" placeholder="********">
+                          </div>
+
+                          <div class="mb-3 form-check">
+                            <input name="admin" type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" name="admin" for="exampleCheck1">Admin</label>
+                        </div>
+              
+                          <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <%- include('../../partials/footer.ejs') %>
+</body>
+
+</html>
