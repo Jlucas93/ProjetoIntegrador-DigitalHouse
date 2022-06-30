@@ -4,25 +4,25 @@ const fs = require("fs")
 const homeController = {
     index: (req, res, next) => {
         const produtos = Produto.findAll()
-        res.render('index', { produtos })
+        res.render('home/index', { produtos })
     },
     cadastro: (req, res, next) => {
-        res.render('cadastro')
+        res.render('home/cadastro')
     },
     login: (req, res, next) => {
-        res.render('login')
+        res.render('home/login')
     },
     perfil: (req, res, next) => {
-        res.render('perfil')
+        res.render('home/perfil')
     },
     historico: (req, res, next) => {
-        res.render('historico')
+        res.render('home/historico')
     },
     carrinho: (req, res, next) => {
-        res.render('carrinho')
+        res.render('home/carrinho')
     },
     produtos: (req, res, next) => {
-        res.render('produtos')
+        res.render('home/produtos')
     }
 
 }
