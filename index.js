@@ -22,11 +22,11 @@ app.use(session({
 	saveUninitialized: false
 }))//Iniciando uma sessao
 
-//Routas
-app.use(homeRouter)
-app.use(admRouter)
-
 //Para páginas não encontradas
 app.use((_req, res, _next) => {
 	return res.status(404).render('not-found', { error: 'Página não encontrada' });
 })
+
+//Routas
+app.use(homeRouter)
+app.use(admRouter)
