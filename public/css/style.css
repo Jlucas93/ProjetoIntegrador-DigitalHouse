@@ -8,6 +8,9 @@ main {
 #header{
   background-color: #00234B !important;
 }
+#header img{
+  width: 12rem;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -186,5 +189,7 @@ section.produtos h1 {
     min-width: 100%;
     padding: 30px;
   }
+  .login-form{
+    margin-top: 20rem;
+  }
 }
-
