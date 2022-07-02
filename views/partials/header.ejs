@@ -1,5 +1,6 @@
 <header class="p-3 bg-light text-white fixed-top" id="header">
     <div class="container">
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
           <img src="/img/logo-menor.png"class="bi me-2" width="90" height="60" role="img" alt="logo da loja">
@@ -13,19 +14,20 @@
           <li><a href="#" class="nav-link px-2 text-white">Calçados</a></li>
         </ul>
 
-        <% if(locals.usuario && user) { %>
+        <% if(locals.user && user) { %>
           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..."
+            <input type="search" class="form-control form-control-dark text-white bg-light" placeholder="Search..."
               aria-label="Search">
           </form>
   
           <div class="text-end">
             <span>Olá <%= locals.user.nome %></span>
-            <a href="/logout" class="btn btn-danger">Sair</a>
+            <a href="/logout"><i class='fas fa-sign-out-alt' style='font-size:20px'></i>
+            </a>
           </div>
           <% } else{ %>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-white bg-light" placeholder="Search..."
+              <input type="search" class="form-control form-control-light text-white bg-light" placeholder="Search..."
                 aria-label="Search">
             </form>
   
