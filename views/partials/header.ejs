@@ -13,14 +13,28 @@
           <li><a href="#" class="nav-link px-2 text-white">Calçados</a></li>
         </ul>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control form-control-dark text-white bg-light" placeholder="Search..." aria-label="Search">
-        </form>
-
-        <div class="text-end">
-          <a  href="/login" class="btn btn-outline-light me-2">Login</a>
-          <a  href="/cadastrar" class="btn  btn-outline-light me-2">Cadastrar</a>
-        </div>
+        <% if(locals.usuario && user) { %>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..."
+              aria-label="Search">
+          </form>
+  
+          <div class="text-end">
+            <span>Olá <%= locals.user.nome %></span>
+            <a href="/logout" class="btn btn-danger">Sair</a>
+          </div>
+          <% } else{ %>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-white bg-light" placeholder="Search..."
+                aria-label="Search">
+            </form>
+  
+            <div class="text-end">
+              <a href="/login" class="btn btn-outline-light me-2">Login</a>
+              <a href="/cadastro" class="btn btn-outline-light me-2">Cadastrar</a>
+            </div>
+            <% }%>
+  
       </div>
     </div>
   </header>

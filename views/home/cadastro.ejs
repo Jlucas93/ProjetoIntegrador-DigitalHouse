@@ -1,72 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/cadastro.css">
-    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>ADM</title>
 </head>
 
 <body>
-    <%- include('../partials/header') %>
-
-    <!-- inicio do cadastro -->
-    <div class="cadastro">
-        <h2>Cadastre-se</h2>
-        <p>Preencha seus dados abaixo</p>
-    </div>
-
-    <section>
-        <form class="form">
-            <!-- <fieldset> -->
-
-                <div class="nome-completo">
-                    <label for="nome">Nome: </label>
-                    <input type="text" name="nome" id="nome">
-                    
-                    <label for="nome">Sobrenome: </label>
-                    <input type="text" name="nome" id="nome">
+    <%- include('../partials/header.ejs') %>
+        <main>
+            <section class="produtos">
+                <div class="container">
+                    <h1>Cadastro</h1>                    
+                    <form method="POST" action="/cadastro">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome"
+                              value="<%=locals.old && old.nome%>">
+                          </div>
+                          <div class="mb-3">
+                            <label for="sobrenome" class="form-label">Sobrenome</label>
+                            <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome"
+                              value="<%=locals.old && old.sobrenome%>">
+                          </div>
+                          <div class="mb-3">
+                            <label for="endereco" class="form-label">Endereço</label>
+                            <input type="text" name="endereco" id="endereco" class="form-control" placeholder="endereço"
+                              value="<%=locals.old && old.endereço%>">
+                          </div>
+                          <div class="mb-3">
+                            <label for="data" class="form-label">Data de Nascimento</label>
+                            <input type="date" name="data" id="data" class="form-control" placeholder="data"
+                              value="<%=locals.old && old.data%>">
+                          </div>
+              
+                          <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="seuemail@exemplo.com"
+                            value="<%= locals.old && old.email%>">
+                          </div>
+              
+                          <div class="mb-3">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" name="senha" id="senha" class="form-control" placeholder="********">
+                          </div>
+              
+                          <div class="mb-3">
+                            <label for="confirmacaoSenha" class="form-label">Confirmação da Senha</label>
+                            <input type="password" name="confirmacaoSenha" id="senha" class="form-control" placeholder="********">
+                          </div>
+              
+                          <button type="submit" class="btn btn-primary">Cadastrar</button>
+                          <a href="/" class="btn btn-primary">Cancelar </a>
+                    </form>                    
                 </div>
-
-                <div class="email-form">
-                    <label for="email">E-mail: </label>
-                    <input type="email" name="email" id="email">
-                </div>
-
-                <div class="telefone">
-                    <label for="telefone">Telefone: </label>
-                    <input type="type" nome="telefone" id="telefone">
-
-                    <label for="telefone">Telefone 2: </label>
-                    <input type="type" nome="telefone" id="telefone">
-                </div>
-
-                <div class="senha">
-                    <label for="senha">Senha: </label>
-                    <input type="password" name="senha" id="senha">
-
-                    <label for="senha">Repita a Senha: </label>
-                    <input type="password" name="senha" id="senha">
-                </div>
-
-           <!--  </fieldset> -->
-        </form>
-
-        <div class="checkbox-cadastro">
-            <input type="checkbox" name="termos">
-        <label for="termos">Li e concordo com os termos de uso</label>
-        </div>
-
-        <div class="button-cadastro">
-            <button type="submit">Cadastre-se</button>
-        </div>
-        
-    </section>
-    
-    <!-- final do cadastro -->
-    <%- include('../partials/footerAntigo') %>
+            </section>
+        </main>
+        <%- include('../partials/footer.ejs') %>
 </body>
 
 </html>
