@@ -1,5 +1,6 @@
 const express = require('express');
 const homeRouter = require('./routes/home')
+const produtoRouter = require('./routes/produto')
 const admRouter = require('./routes/adm')
 const session = require('express-session')
 
@@ -25,6 +26,7 @@ app.use(session({
 
 //Routas
 app.use(homeRouter)
+app.use(produtoRouter)
 app.use(admRouter)
 
 //Para páginas não encontradas

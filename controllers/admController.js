@@ -1,4 +1,3 @@
-const Produto = require('../models/produto')
 const Usuario = require('../models/usuario')
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcrypt');
