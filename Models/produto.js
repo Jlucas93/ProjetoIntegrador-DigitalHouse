@@ -27,6 +27,18 @@ const Produto = {
         const user = dataBase.usuarios.find(user => user.email === email)
         return user
     },
+    update: (id, produtoAtualizado) => {
+        const dataBase = open()
+        const index = dataBase.produtos.findIndex(produto => produto.id === id)
+        dataBase.produtos[index] = produtoAtualizado
+        store(dataBase)
+    },
+    delete: (id) => {
+        const dataBase = open()
+        const index = dataBase.produtos.findIndex(produto => produto.id === id)
+        dataBase.produtos.splice(index, 1)
+        store(dataBase)
+    },
     save: (produto) => {
         const dataBase = open()
         produto.id = geradorDeId()

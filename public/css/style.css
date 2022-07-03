@@ -4,7 +4,10 @@ body {
 main {
   margin-top: 10rem;
 }
-
+.cadastro-form{
+  margin: auto;
+  width: 50%;
+}
 #header{
   background-color: #00234B !important;
 }
