@@ -4,6 +4,9 @@ const fs = require("fs")
 const homeController = {
     index: (req, res) => {
         const produtos = Produto.findAll()
+        if (req.session.user) {
+            res.render('home/index', { produtos, user: req.session.user })
+        }
         res.render('home/index', { produtos })
     },
     cadastro: (req, res) => {
