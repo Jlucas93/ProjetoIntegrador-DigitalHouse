@@ -7,12 +7,12 @@ const isAdm = require("../middlewares/isAdm");
 const uploadIMG = multerStorage('imagem', '/produtoExibicao')
 
 
-router.use(isAdm);
-router.get("/produto/cadastro", ProdutosController.createProduto);
-router.post("/produto/cadastro", uploadIMG, ProdutosController.store);
-router.get("/produto/:id", ProdutosController.showOneProduct);
-router.get("/produto/:id/editar", ProdutosController.showEditProduct);
-router.put("/produto/:id/editar", ProdutosController.edit);
-router.delete("/produto/:id", ProdutosController.delete);
+router.use(isAdm)
+router.get("/cadastro", ProdutosController.createProduto);
+router.post("/cadastro", uploadIMG, ProdutosController.store);
+router.get("/:id", ProdutosController.showOneProduct);
+router.get("/:id/editar", ProdutosController.showEditProduct);
+router.put("/:id/editar", ProdutosController.edit);
+router.delete("/:id", ProdutosController.delete);
 
 module.exports = router;

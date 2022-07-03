@@ -26,7 +26,7 @@ app.use(session({
 
 //Routas
 app.use(homeRouter)
-app.use(produtoRouter)
+app.use("/adm/produto", produtoRouter)
 app.use(admRouter)
 
 //Para páginas não encontradas
