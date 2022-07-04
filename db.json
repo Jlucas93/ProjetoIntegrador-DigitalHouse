@@ -64,16 +64,6 @@
       "endereco": "jhjdhldjhl",
       "data": "2022-07-29",
       "id": "18d537da-68fa-49c9-a53d-a4fa79acb1c0"
-    },
-    {
-      "nome": "vanessa1",
-      "sobrenome": "",
-      "email": "vanessa1@gmail.com",
-      "senha": "$2b$10$WZRsZez83zF92jsn65VihOiosXExK4OYRDH/Rr829gXnkU8HjtRMe",
-      "admin": false,
-      "endereco": "",
-      "data": "",
-      "id": "8f59e580-f140-4bc8-8eda-0d3e0f9ed16d"
     }
   ]
 }

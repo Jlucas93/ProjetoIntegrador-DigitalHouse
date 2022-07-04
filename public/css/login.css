@@ -10,7 +10,7 @@ body {
 }
 .login-form {
     height: 100vh;
-    background-color: rgb(117, 117, 216);
+    background-color: #00234B ;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -85,7 +85,7 @@ body {
     color: #ffffff;
     font-size: 16px;
     padding: 8px 35px;
-    background-color: #555df0;
+    background-color: #00234B ;
     transition: box-shadow .5s ease;
     cursor: pointer;
     margin-right: 15px;
