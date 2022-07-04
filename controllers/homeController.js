@@ -49,10 +49,9 @@ const homeController = {
             email,
             password
         } = req.body
-console.log(req.body)
 
         const user = Usuario.findByEmail(email)
-        
+
         if (!user || !bcrypt.compareSync(password, user.senha)) {
             res.render('home/login', { error: 'Email ou senha está incorreto ou não existe' })
             return
@@ -60,7 +59,7 @@ console.log(req.body)
         req.session.user = user
         return res.redirect('/')
 
-    },  
+    },
     perfil: (req, res) => {
         res.render('home/perfil')
     },

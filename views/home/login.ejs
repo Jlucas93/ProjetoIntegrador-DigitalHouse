@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
     <script src="https://kit.fontawesome.com/4a84259549.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Login</title>
 </head>
 
 <body>
     <section class="login-form">
         <form action="/auth" method="POST">
             <div class="box">
-
                 <div class="heading">
                     <div class="img">
                         <span><i class="fa-solid fa-user fa-2xl"></i></span>
                     </div>
                     <h4>Login</h4>
                     <div class="errors">
-                    <% if (locals.error) { %>
-                      <ul>
-                        <li><%= locals.error %></li>
-                      </ul>
-                    <% } %>
-                </div>
+                        <% if (locals.error) { %>
+                            <ul>
+                                <li>
+                                    <%= locals.error %>
+                                </li>
+                            </ul>
+                            <% } %>
+                    </div>
                 </div>
                 <div class="form-fields">
                     <div class="input-box">
@@ -40,15 +42,10 @@
                         <button type="submit">Entrar</button>
                         <a href="">Esqueci a senha</a>
                     </div>
-
                 </div>
-
-
             </div>
         </form>
-
     </section>
-
 </body>
 
 </html>
