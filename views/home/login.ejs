@@ -12,7 +12,7 @@
 
 <body>
     <section class="login-form">
-        <form action="/auth" method="POST">
+        <form action="/login" method="POST">
             <div class="box">
                 <div class="heading">
                     <div class="img">
@@ -31,11 +31,13 @@
                 </div>
                 <div class="form-fields">
                     <div class="input-box">
-                        <input type="text" placeholder="Email ou usuário" class="form-control" name="email">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email ou usuário" class="form-control" name="email">
                         <span><i class="fa-solid fa-envelope"></i></span>
                     </div>
                     <div class="input-box">
-                        <input type="password" placeholder="Senha" class="form-control" name="password">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password"  placeholder="Senha" class="form-control" name="senha">
                         <span><i class="fa-solid fa-lock"></i></span>
                     </div>
                     <div class="button-box">

@@ -1,9 +1,9 @@
-const isAdm = (req, res, next) => {
-    if (!req.session.user || !req.session.user.admin) {
-        return res.redirect('/adm/login')
+const isAdmin = (req, res, next) => {
+    const { user } = req.session;
+    if (user.admin) {
+        return next();
     }
-    res.locals.user = req.session.user
-    next()
+    return res.redirect("/");
 }
 
-module.exports = isAdm
+module.exports = isAdmin;

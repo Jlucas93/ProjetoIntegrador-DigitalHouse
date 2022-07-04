@@ -31,31 +31,6 @@ const admController = {
             return res.redirect('/adm')
         }
         return res.render('adm', { listaDeErros: error.errors, old: req.body })
-    },
-    login: (req, res) => {
-        res.render('adm/login')
-    },
-    postLogin: (req, res) => {
-        const {
-            email,
-            senha
-        } = req.body
-
-        const user = Usuario.findByEmail(email)
-
-        if (!user || !bcrypt.compareSync(senha, user.senha)) {
-            res.render('adm/login', { error: 'Email ou senha está incorreto ou não existe' })
-            return
-        }
-        req.session.user = user
-        return res.redirect('/adm')
-
-    },
-    logout: (req, res) => {
-        req.session.destroy((error) => {
-            console.log(error)
-            return res.redirect('/adm/login')
-        })
     }
 }
 

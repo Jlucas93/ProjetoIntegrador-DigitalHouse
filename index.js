@@ -1,6 +1,7 @@
 const express = require('express');
 const homeRouter = require('./routes/home')
 const produtoRouter = require('./routes/produto')
+const authRouter = require('./routes/auth')
 const admRouter = require('./routes/adm')
 const session = require('express-session')
 
@@ -27,9 +28,10 @@ app.use(session({
 //Routas
 app.use(homeRouter)
 app.use("/adm/produto", produtoRouter)
+app.use(authRouter)
 app.use(admRouter)
 
 //Para páginas não encontradas
-app.use((_req, res, _next) => {
-	return res.status(404).render('not-found', { error: 'Página não encontrada' });
+app.use((req, res, next) => {
+	return res.status(404).render('home/not-found', { error: 'Página não encontrada' });
 })

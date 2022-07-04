@@ -1,69 +1,69 @@
 {
-  "produtos": [
-    {
-      "id": "1",
-      "nome": "camisa",
-      "preco": "70.00",
-      "imagem": "img/camisa_1.jpeg",
-      "tamanho": "M",
-      "estoque": true
-    },
-    {
-      "id": "2",
-      "nome": "Calça",
-      "preco": "120.00",
-      "imagem": "img/blusao.png",
-      "tamanho": "G",
-      "estoque": true
-    },
-    {
-      "id": "3",
-      "nome": "camisa",
-      "preco": "70.00",
-      "imagem": "img/camisa_1.jpeg",
-      "tamanho": "P",
-      "estoque": true
-    },
-    {
-      "nome": "Camisa azul",
-      "imagem": "img/produtoExibicao/1656274840114-teste.jpg",
-      "tamanhoP": false,
-      "tamanhoM": "M",
-      "tamanhoG": "G",
-      "preco": "85",
-      "estoque": true,
-      "descricao": "Camisa de cor azul, confortável, ótima oportunidade ",
-      "id": "99c427b5-33a2-4fe9-a789-b5e514f0668d"
-    }
-  ],
-  "usuarios": [
-    {
-      "nome": "João Lucas",
-      "sobrenome": "Nascimento Andrade",
-      "email": "lucas@admin.com",
-      "senha": "$2b$10$amXk.Rqcvev2Enz8FKXuzur9Zp/OSYtK61NFlobEljVsvPnTaNXDC",
-      "admin": true,
-      "id": "6ee7bb21-7c76-422d-ac80-141e649e6ab6"
-    },
-    {
-      "nome": "vanessa",
-      "sobrenome": "so",
-      "email": "",
-      "senha": "$2b$10$dco3oZpAE4R/CF8JqMWoGO5nC56He/d4OriOVTqs8wHIi.7NJM2G2",
-      "admin": false,
-      "endereco": "gdfsfs",
-      "data": "",
-      "id": "ab368678-797f-4aff-889c-c3340a7dbf81"
-    },
-    {
-      "nome": "vanessa",
-      "sobrenome": "so",
-      "email": "vanessa@gmail.com",
-      "senha": "$2b$10$3tR/u3LFC2K.bsoh9e.uoOY.Z3vpxANGM9EaEqOuXQKe6DXeh0vMi",
-      "admin": false,
-      "endereco": "jhjdhldjhl",
-      "data": "2022-07-29",
-      "id": "18d537da-68fa-49c9-a53d-a4fa79acb1c0"
-    }
-  ]
+    "produtos": [
+        {
+            "id": "1",
+            "nome": "camisa",
+            "preco": "70.00",
+            "imagem": "img/camisa_1.jpeg",
+            "tamanho": "M",
+            "estoque": true
+        },
+        {
+            "id": "2",
+            "nome": "Calça",
+            "preco": "120.00",
+            "imagem": "img/blusao.png",
+            "tamanho": "G",
+            "estoque": true
+        },
+        {
+            "id": "3",
+            "nome": "camisa",
+            "preco": "70.00",
+            "imagem": "img/camisa_1.jpeg",
+            "tamanho": "P",
+            "estoque": true
+        },
+        {
+            "nome": "Camisa azul",
+            "imagem": "img/produtoExibicao/1656274840114-teste.jpg",
+            "tamanhoP": false,
+            "tamanhoM": "M",
+            "tamanhoG": "G",
+            "preco": "85",
+            "estoque": true,
+            "descricao": "Camisa de cor azul, confortável, ótima oportunidade ",
+            "id": "99c427b5-33a2-4fe9-a789-b5e514f0668d"
+        }
+    ],
+    "usuarios": [
+        {
+            "nome": "João Lucas",
+            "sobrenome": "Nascimento Andrade",
+            "email": "lucas@admin.com",
+            "senha": "$2b$10$amXk.Rqcvev2Enz8FKXuzur9Zp/OSYtK61NFlobEljVsvPnTaNXDC",
+            "admin": true,
+            "id": "6ee7bb21-7c76-422d-ac80-141e649e6ab6"
+        },
+        {
+            "nome": "vanessa",
+            "sobrenome": "so",
+            "email": "",
+            "senha": "$2b$10$dco3oZpAE4R/CF8JqMWoGO5nC56He/d4OriOVTqs8wHIi.7NJM2G2",
+            "admin": false,
+            "endereco": "gdfsfs",
+            "data": "",
+            "id": "ab368678-797f-4aff-889c-c3340a7dbf81"
+        },
+        {
+            "nome": "vanessa",
+            "sobrenome": "so",
+            "email": "vanessa@gmail.com",
+            "senha": "$2b$10$3tR/u3LFC2K.bsoh9e.uoOY.Z3vpxANGM9EaEqOuXQKe6DXeh0vMi",
+            "admin": false,
+            "endereco": "jhjdhldjhl",
+            "data": "2022-07-29",
+            "id": "18d537da-68fa-49c9-a53d-a4fa79acb1c0"
+        }
+    ]
 }

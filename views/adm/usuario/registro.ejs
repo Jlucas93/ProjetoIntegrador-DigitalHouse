@@ -22,28 +22,35 @@
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome"
+                            required
                               value="<%=locals.old && old.nome%>">
                           </div>
                           <div class="mb-3">
                             <label for="sobrenome" class="form-label">Sobrenome</label>
                             <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome"
-                              value="<%=locals.old && old.sobrenome%>">
+                            required  
+                            value="<%=locals.old && old.sobrenome%>">
                           </div>
               
                           <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="seuemail@exemplo.com"
+                            required
                             value="<%= locals.old && old.email%>">
                           </div>
               
                           <div class="mb-3">
                             <label for="senha" class="form-label">Senha</label>
-                            <input type="password" name="senha" id="senha" class="form-control" placeholder="********">
+                            <input type="password" name="senha" id="senha" class="form-control"
+                            required
+                            placeholder="********">
                           </div>
               
                           <div class="mb-3">
                             <label for="confirmacaoSenha" class="form-label">Confirmação da Senha</label>
-                            <input type="password" name="confirmacaoSenha" id="senha" class="form-control" placeholder="********">
+                            <input type="password" name="confirmacaoSenha" id="senha" class="form-control"
+                            required
+                            placeholder="********">
                           </div>
 
                           <div class="mb-3 form-check">
