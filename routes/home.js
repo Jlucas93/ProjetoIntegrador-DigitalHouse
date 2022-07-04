@@ -12,5 +12,6 @@ router.get('/historico', homeController.historico)
 router.get('/cadastro', homeController.cadastro)
 router.get('/produtos', homeController.produtos)
 router.get('/carrinho', homeController.carrinho)
+router.post('/auth', homeController.auth)
 
 module.exports = router
