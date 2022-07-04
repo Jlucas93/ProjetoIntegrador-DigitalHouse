@@ -1,5 +1,8 @@
 const Produto = require("../Models/produto")
 const fs = require("fs")
+const { validationResult } = require("express-validator")
+const bcrypt = require("bcrypt")
+const Usuario = require("../Models/usuario")
 
 const homeController = {
     index: (req, res) => {
