@@ -17,6 +17,17 @@
       <section class="cadastro-form">
         <div class="container">
           <h1>Cadastro</h1>
+          <div class="errors">
+              <% if(typeof listaDeErros !== "undefined"){ %>
+                  <h3>Erros</h3>
+                  <ul>
+                      <% for(let error of listaDeErros) { %>
+                          <li><%= error.msg %></li>
+                      <% } %>
+                  </ul>
+                  
+              <% } %>
+          </div>
           <form method="POST" action="/cadastro">
             <div class="mb-3">
               <label for="nome" class="form-label">Nome</label>
