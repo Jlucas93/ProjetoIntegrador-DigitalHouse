@@ -19,11 +19,9 @@ const authController = {
                 senha,
                 admin
             } = req.body
-
             const isRegistered = Usuario.findByEmail(email);
-
             if (isRegistered) {
-                return res.render("home/cadastro", { error: "Não foi possível realizar o cadastro" });
+                return res.render("home/cadastro", { error: 'Email já registrado' });
             }
             const cryptSenha = bcrypt.hashSync(senha, 10)
             const user = {
@@ -34,9 +32,9 @@ const authController = {
                 admin: (admin ? true : false)
             }
             Usuario.save(user)
-            return res.redirect('/adm')
+            return res.redirect('/')
         }
-        return res.render('adm', { listaDeErros: error.errors, old: req.body })
+        return res.render('home/cadastro', { listaDeErros: error.errors, old: req.body })
     },
     postLogin: (req, res) => {
         const {

@@ -30,7 +30,7 @@ const admController = {
             Usuario.save(user)
             return res.redirect('/adm')
         }
-        return res.render('adm', { listaDeErros: error.errors, old: req.body })
+        return res.render('adm/usuario/registro', { listaDeErros: error.errors, old: req.body })
     }
 }
 

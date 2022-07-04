@@ -1,6 +1,6 @@
 const { body } = require('express-validator');
 
-const validationResult = [
+const validarCadastro = [
     body('nome')
         .notEmpty().withMessage('O nome deve estar preenchido')
         .isLength({ min: 5 }).withMessage("O nome deve ter mais de 5 caracteres")
@@ -19,5 +19,4 @@ const validationResult = [
             return true
         })
 ]
-
-module.exports = validationResult
+module.exports = validarCadastro

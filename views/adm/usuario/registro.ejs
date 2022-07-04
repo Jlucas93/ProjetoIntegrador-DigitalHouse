@@ -17,8 +17,18 @@
             <section class="produtos">
                 <div class="container">
                     <h1>Cadastrar novo Usuário</h1>
+                    <div class="errors">
+                      <% if(typeof listaDeErros !== "undefined"){ %>
+                          <h3>Erros</h3>
+                          <ul>
+                              <% for(let error of listaDeErros) { %>
+                                  <li><%= error.msg %></li>
+                              <% } %>
+                          </ul>                  
+                      <% } %>
+                  </div>
                     <a href="/adm" class="btn btn-primary mb-2">Voltar </a>
-                    <form method="POST" action="/adm/usuario/registro">
+                    <form  action="/adm/usuario/registro" method="POST">
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome</label>
                             <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome"
@@ -48,7 +58,7 @@
               
                           <div class="mb-3">
                             <label for="confirmacaoSenha" class="form-label">Confirmação da Senha</label>
-                            <input type="password" name="confirmacaoSenha" id="senha" class="form-control"
+                            <input type="password" name="confirmacaoSenha" id="confirmacaoSenha" class="form-control"
                             required
                             placeholder="********">
                           </div>
