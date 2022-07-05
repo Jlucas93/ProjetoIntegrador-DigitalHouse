@@ -12,6 +12,9 @@
           <li><a href="#" class="nav-link px-2 text-white">Feminino</a></li>
           <li><a href="#" class="nav-link px-2 text-white">Acessórios</a></li>
           <li><a href="#" class="nav-link px-2 text-white">Calçados</a></li>
+          <%if(locals.user && locals.user.admin){ %>
+            <li><a href="/adm" class="nav-link px-2 text-white">ADM</a></li>
+            <% } %>
         </ul>
 
         <% if(locals.user && user) { %>

@@ -1,5 +1,6 @@
 body {
   color: #5a5a5a;
+  font-family: 'Roboto', sans-serif;
 }
 main {
   margin-top: 10rem;
@@ -13,6 +14,94 @@ main {
 }
 #header img{
   width: 12rem;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card img{
+  width: 100%;
+  height: 15rem;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-right: .5rem;
+  width: 23%;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.container-card {
+  color: #fff;
+  background-color: #00234B;
+  padding: 1rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+header a:hover{
+  text-decoration: underline;
+  outline: 1px solid transparent;
+}
+footer{
+  background-color: #00234B ;
+  color:#fff;
+}
+footer a{
+  text-decoration: none;
+  color: #fff;
+  outline: 1px solid transparent;
+}
+footer a:hover{
+  text-decoration: underline;
+  color: rgb(13, 212, 243);
+  outline: 1px solid transparent;
+}
+
+footer img:hover{
+  transform: scale(1.1);
+}
+#map iframe {
+  height: 20vh;
+  width: 17.5rem;
+  border-radius: 1rem ;
+}
+
+#map span{
+  font-weight: bold;
+}
+
+#redes-sociais a img {
+  width: 10rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.not-found {
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.img-error img {
+  max-height: 500px;
+  max-width: 80%;
+}
+
+section.produtos h1 {
+  color: #00234B;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -71,7 +160,6 @@ main {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
 @media (min-width: 40em) {
 
   /* Bump up size of carousel content */
@@ -92,22 +180,6 @@ main {
   }
 }
 
-.cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-.card img{
-  width: 100%;
-  height: 15rem;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  margin-right: .5rem;
-  width: 23%;
-  cursor: pointer;
-}
 @media (max-width: 540px) {
   .cards{
     flex-direction: column;
@@ -123,69 +195,6 @@ main {
   }
   
 }
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.container-card {
-  color: #fff;
-  background-color: #00234B;
-  padding: 1rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-}
-
-footer{
-  background-color: #00234B ;
-  color:#fff;
-}
-
-footer a{
-  color: #fff;
-  outline: 1px solid transparent;
-}
-#map iframe {
-  height: 20vh;
-  width: 17.5rem;
-  border-radius: 1rem ;
-}
-
-#map span{
-  font-weight: bold;
-}
-
-#redes-sociais a img {
-  width: 10rem;
-  height: 3rem;
-  margin-right: 1rem;
-}
-
-.not-found {
-  margin-top: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.img-error {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.img-error img {
-  max-height: 500px;
-  max-width: 80%;
-}
-
-section.produtos h1 {
-  color: #00234B;
-  font-size: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
 
 @media (max-width: 500px) {
   .login-form .box {
