@@ -95,11 +95,25 @@ body {
 .login-form .box .form-fields .button-box .button:hover {
     box-shadow: 0px 0px 10px #4013e4;
 }
-.login-form .box .form-fields .button-box a {
+.login-form .box .form-fields a {
     font-size: 16px;
     color: #555df0;
 }
 
+.button-box a {
+    color:#ffffff !important;
+}
+
+.button-back-home {
+    margin: auto;
+    margin-top: 3rem;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-back-home a {
+    color: #555df0;
+}
 
 @media ( max-width: 500px){
     .login-form .box{
