@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body a {
+    text-decoration: none !important;
+    color: #fff;
+  }
+  
+  header {
+    width: 100%;
+  }
+  
+  header img {
+    width: 90px;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #00234B;
+    color: #fff;
+    height: 8vh;
+  }
+  
+  .navbar a {
+    cursor: pointer;
+    padding: 10px;
+    margin: 2px;
+    color: #fff;
+  }
+  
+  .navbar button {
+    cursor: pointer;
+    width: 2rem;
+    border-radius: 100%;
+  }
+  
+  .navbar input {
+    height: 2rem;
+    width: 20rem;
+    border: 1px solid transparent;
+    border-radius: 25rem;
+    outline: none
+  }
+  
+  .search img {
+    width: 100%;
+  }
+  
+  .slider {
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
+  }
+  
+  .btn:active {
+    transform: scale(1.1);
+  }
+  
+  .btn-prev {
+    top: 45%;
+    left: 2%;
+  }
+  
+  .btn-next {
+    top: 45%;
+    right: 2%;
+  }
+  
+  /* css da main de contato */
+  .contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  fieldset {
+    border-style: none;
+    padding: 10px;;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto;
+    background-color: red;
+    width: 35%;
+  }
+  
+  form div {
+    padding: 10px;
+  }
+  
+  .nome-completo input {
+    height: 30px;
+    background: #ADBBEE;
+    border: 1px solid #00234B;
+    border-radius: 15px;
+  }
+  
+  .checkbox-contato {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-right: 200px;
+    padding-bottom: 50px;
+  }
+  .button-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 15px;
+  
+  }
+  /* não consigo aplicar o css no button */
+  /* final do css de contato */
+  .footer{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 30vh;
+    margin-top: 10px;
+    background-color: #00234B;
+    color: #fff;
+    border: solid black 1px; 
+  }
+  
+  .map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .map iframe{
+    height: 20vh;
+    width: 20rem;
+    border-radius: 1rem;
+  }
+  .footer{
+    display: flex;
+    background-color: #00234B;
+    margin-top: 180px;
+  }
+  
+  .localizacao{
+  display: flex;
+  flex-direction: column;
+  color: #ADBBEE;
+  margin-top: 15px;
+  }
+  
+  .localizacao img{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 179px;
+    height: 112px;
+  }
+  
+  .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .info a {
+    margin-top: 8px;
+    padding: 10px 0;
+    color: #ADBBEE;
+  }
+  
+  .redes-sociais {
+   display: flex;
+   align-items: center;
+  }
+  .redes-sociais a img{
+    width: 166px;
+    height: 46px;
+    margin-right: 20px;
+  }
+  
+  .contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contato span{
+    margin-top: 10px;
+    color: #ADBBEE;
+  }

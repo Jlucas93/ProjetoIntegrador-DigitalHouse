@@ -28,8 +28,7 @@
     "uuid": "^8.3.2"
   },
   "homepage": "https://github.com/Jlucas93/PI#readme",
-
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.19"
   }
 }
