@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Produto</title>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="my-5 pt-5">
+        <div class="d-flex justify-content-center pt-3 w-100 container">
+            <img src="/<%= produto.imagem %>" width="50%" height="410rem" alt="error ao carregar imagem">
+        </div>
+        <section class="d-flex justify-content-evenly container">
+            <div class="d-flex flex-column justify-content-center pt-3 w-50">
+                <div class="f"><b> Em estoque</b></div>
+                <div class="d-flex align-center mt-3 justify-content-between">
+                    <div>
+                        <h2>
+                            <%=produto.nome%>
+                        </h2>
+                        <h4>R$ <%= produto.preco %>
+                        </h4>
+                        <span>À vista no PIX <span>com até <b>5% OFF</b></span></span>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <%= produto.descricao %>
+                </div>
+                <form action="/carrinho/adicionar" method="POST">
+                    <input type="hidden" name="id" value="<%=produto.id%>">
+                    <input type="hidden" name="nome" value="<%=produto.nome%>">
+                    <input type="hidden" name="imagem" value="<%=produto.imagem%>">
+                    <input type="hidden" name="preco" value="<%=produto.preco%>">
+                    <button type='submit' class="btn btn-primary">COMPRAR</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>

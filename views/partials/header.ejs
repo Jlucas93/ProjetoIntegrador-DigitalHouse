@@ -21,12 +21,11 @@
           <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
             <input type="search" class="form-control form-control-dark text-white bg-light" placeholder="Search..."
               aria-label="Search">
-          </form>
-  
+          </form>  
           <div class="text-end">
             <span>Olá <%= locals.user.nome %></span>
-            <a href="/logout"><i class='fas fa-sign-out-alt' style='font-size:20px'></i>
-            </a>
+            <a href="/logout"><i class='fas fa-sign-out-alt'></i></a>
+            <a href="/carrinho"><i class="fa-light fa-cart-shopping"></i></a>
           </div>
           <% } else{ %>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">

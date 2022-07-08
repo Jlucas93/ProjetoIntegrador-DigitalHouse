@@ -35,9 +35,9 @@
                             class="d-block w-100 h-100" alt="...">
                         <div class="container">
                             <div class="carousel-caption text-start text-dark">
-                                <h1>Confira nossas promoções</h1>
+                                <h1><b>Confira nossas promoções</b></h1>
                                 <p>Descontos de até 50%</p>
-                                <p><a class="btn btn-lg btn-light" href="#">Conferir agora</a></p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Conferir agora</a></p>
                             </div>
                         </div>
                     </div>
@@ -80,23 +80,33 @@
                 </button>
             </div>
 
-            <section class="cards">
-                <% for(const produto of produtos) {%>
-                    <div class="card">
-                        <img src="<%=produto.imagem%>" alt="Avatar" style="width:100%">
-                        <div class="container">
-                            <h4><b>Camisa Branca</b></h4>
-                            <p>Valor: R$<%= produto.preco%>
-                            </p>
-                            <p>Descricao: <%= produto.descricao%>
-                            </p>
-                            <p>
-                                <%= produto.estoque%>
-                            </p>
+            <div class="album py-5 bg-light">
+                <div class="container">
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">                    
+                    <% for(const produto of produtos) {%>
+                        <div class="col">
+                          <div class="card shadow-sm">
+                            <img class="bd-placeholder-img card-img-top" src="<%= produto.imagem %>" width="100%" height="225"></img>
+                            <div class="card-body">
+                              <h3><%= produto.nome %> </h3>
+                              <h4 class="text-muted">R$ <%= produto.preco %></h4>
+                              <h2 >Descricao: <h5 class="text-muted"><%= produto.descricao%></h5></h2>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                  <a href="/produtos/<%=produto.id%>">
+                                    <button type="button" class="btn btn-sm btn-primary">Confira</button>
+                                  </a>
+                                </div>
+                                <small class="text-muted"></small>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      <% } %>
                     </div>
-                    <%}%>
-            </section>
+                  </div>
+                </div>
+              </div>
         </main>
         <%- include('../partials/footer') %>
 

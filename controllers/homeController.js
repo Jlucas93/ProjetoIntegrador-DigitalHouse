@@ -4,25 +4,29 @@ const homeController = {
   index: (req, res) => {
     const produtos = Produto.findAll()
     if (req.session.user) {
-      return res.render('home/index', { produtos, user: req.session.user })
+      return res.render("home/index", { produtos, user: req.session.user })
     }
-    res.render('home/index', { produtos })
+    return res.render("home/index", { produtos })
   },
   cadastro: (req, res) => {
-    res.render('home/cadastro')
-  },
-  perfil: (req, res) => {
-    res.render('home/perfil')
-  },
-  historico: (req, res) => {
-    res.render('home/historico')
-  },
-  carrinho: (req, res) => {
-    res.render('home/carrinho')
+    res.render("home/cadastro")
   },
   produtos: (req, res) => {
-    res.render('home/produtos')
+    const { id } = req.params
+    const produto = Produto.findById(id)
+    if (!produto) {
+      return res.render("home/not-found", { error: "Produto não encontrado" });
+    }
+    return res.render("home/detalhes", { produto })
+  },
+  perfil: (req, res) => {
+    res.render("home/perfil")
+  },
+  historico: (req, res) => {
+    res.render("home/historico")
+  },
+  carrinho: (req, res) => {
+    res.render("home/carrinho")
   }
-
 }
 module.exports = homeController
