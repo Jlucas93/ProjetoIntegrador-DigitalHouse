@@ -26,18 +26,23 @@ Este é projeto integradar do curso web fullstack da DigitalHouse, com o intuito
 - <a href="https://ejs.co/">
   <img alt="EJS" src="https://img.shields.io/badge/Using-EJS-blue">
 </a>
+
 - <a href="https://nodejs.org/en/">
   <img alt="NodeJS" src="https://img.shields.io/badge/Node-JS-blue">
 </a>
+
 - <a href="https://expressjs.com/pt-br/">
   <img alt="ExpressJS" src="https://img.shields.io/badge/Express-JS-blue">
 </a>
+
 - <a href="https://www.mysql.com/">
   <img alt="MySQL" src="https://img.shields.io/badge/Using-MySQL-blue">
 </a>
+
 - <a href="https://sequelize.org/">
   <img alt="Sequelize" src="https://img.shields.io/badge/Using-Sequelize-blue">
 </a>
+
 - <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">
   <img alt="Bootstrap" src="https://img.shields.io/badge/Using-Bootstrap-blue">
 </a>
