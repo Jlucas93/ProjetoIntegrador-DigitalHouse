@@ -10,6 +10,7 @@ const produtoRouter = require('./routes/produto')
 const carrinhoRouter = require('./routes/carrinho')
 const admRouter = require('./routes/adm')
 
+
 //Starting the server
 const port = 3000
 app.listen(port, () => console.log('Server started on port ' + port))

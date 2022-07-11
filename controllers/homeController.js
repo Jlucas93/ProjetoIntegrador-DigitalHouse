@@ -19,6 +19,10 @@ const homeController = {
     }
     return res.render("home/detalhes", { produto })
   },
+  contato: (req, res) => {
+    res.render("home/Contato")
+  },
+
   perfil: (req, res) => {
     res.render("home/perfil")
   },
