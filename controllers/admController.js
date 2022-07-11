@@ -31,6 +31,9 @@ const admController = {
             return res.redirect('/adm')
         }
         return res.render('adm/usuario/registro', { listaDeErros: error.errors, old: req.body })
+    },
+    perfil: (req, res) => {
+        res.render('home/perfil')
     }
 }
 

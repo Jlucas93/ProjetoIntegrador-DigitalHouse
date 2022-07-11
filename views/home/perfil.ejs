@@ -5,49 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="/css/perfil.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Meu Perfil</title>
 </head>
 
 <body>
-    <header>
-        <!-- Inicio Header -->
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo-menor.png" alt="Logo" />
-            </div>
-            <div class="wrapper">
-                <div class="nav-busca">
-                    <input type="text" placeholder="  Busque aqui!">
-                    <button type="submit"><img src="img/seacrh-icon.png" alt="Imagem de uma Lupa"></button>
-                </div>
-                <div class="nav-links">
-                    <a href="#">Masculino</a>
-                    <a href="#">Feminino</a>
-                    <a href="#">Acessórios</a>
-                    <a href="#">Calçados</a>
-                </div>
-            </div>
-            <div class="btn-logar">
-                <a href="#">Acesse sua Conta</a>
-            </div>
-        </nav>
-    </header> <!-- Fim Header -->
+    <%- include('../partials/header') %>
 
-    <main>
-        <!-- Inicio Main -->
-        <section class="usuario">
-            <h2> Olá, [Usuário] </h2>
-            <span>Aqui você pode acessar os seus ultimos pedidos, endereços cadastrados e alterar os seus dados.</span>
-            <div class="btn-usuario">
-                <a href="#">Acessar Ultimos Pedidos</a>
-                <a href="#">Acessar Meus Endereços</a>
-                <a href="#">Alterar Meus Dados</a>
+        <main>
+            <div class="container">
+                <h1> Bem vindo <span><%=locals.user.nome%>!</span>
+                </h1>
+                <div class="content-all">
+                    <div class="content-card">
+                        <a href="#">Ultimos Pedidos</a>
+                    </div>
+                    <div class="content-card">
+                        <a href="#">Meus Endereço</a>
+                    </div>
+                    <div class="content-card">
+                        <a href="#">Meus Dados</a>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main> <!-- Fim Main -->
+        </main>
 
-    <%- include('../partials/footerAntigo') %>
+        <%- include('../partials/footer') %>
 </body>
 
 </html>

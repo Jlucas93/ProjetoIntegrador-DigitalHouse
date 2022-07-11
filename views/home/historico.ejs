@@ -5,35 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/historico.css">
+    <link rel="stylesheet" href="/css/historico.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
     <title>Histórico de Pedidos</title>
 </head>
 
 <body>
-    <header>
-        <!-- Inicio Header -->
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo-menor.png" alt="Logo" />
-            </div>
-            <div class="wrapper">
-                <div class="nav-busca">
-                    <input type="text" placeholder="  Busque aqui!">
-                    <button type="submit"><img src="img/seacrh-icon.png" alt="Imagem de uma Lupa"></button>
-                </div>
-                <div class="nav-links">
-                    <a href="#">Masculino</a>
-                    <a href="#">Feminino</a>
-                    <a href="#">Acessórios</a>
-                    <a href="#">Calçados</a>
-                </div>
-            </div>
-            <div class="btn-logar">
-                <a href="#">Acesse sua Conta</a>
-            </div>
-        </nav>
-    </header> <!-- Fim Header -->
-
+    <%- include('../partials/header')%>
     <main>
         <!-- Inicio Main -->
         <div class="wrapper">
@@ -103,7 +83,7 @@
         </div>
     </main> <!-- Fim Main -->
 
-   <%- include('../partials/footerAntigo')%>
+   <%- include('../partials/footer')%>
 </body>
 
 </html>
