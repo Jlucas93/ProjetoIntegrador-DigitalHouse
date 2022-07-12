@@ -34,6 +34,10 @@ const admController = {
     },
     perfil: (req, res) => {
         res.render('home/perfil')
+    },
+    userList: (req, res) => {
+        const users = Usuario.findAll()
+        res.render('adm/usuario/users', { users })
     }
 }
 

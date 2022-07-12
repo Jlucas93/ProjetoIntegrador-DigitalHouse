@@ -9,7 +9,9 @@ const isAdm = require('../middlewares/isAdm')
 router.use(isLogged)
 router.use(isAdm)
 router.get('/adm', admController.index)
+router.get('/adm/usuario/listausuarios', admController.userList)
 router.get('/adm/usuario/registro', admController.createUser)
 router.post('/adm/usuario/registro', validarCadastro, admController.postUser)
 router.get('/perfil', admController.perfil)
+
 module.exports = router 

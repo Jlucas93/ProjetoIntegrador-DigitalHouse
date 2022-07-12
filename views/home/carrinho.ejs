@@ -26,7 +26,6 @@
                             <table id="table-cart" class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
                                         <th scope="col">imagem</th>
                                         <th scope="col">Nome</th>
                                         <th scope="col">Quantidade</th>
@@ -37,9 +36,6 @@
                                 <tbody>
                                     <% for(let produto of carrinho) {%>
                                         <tr>
-                                            <td scope="row">
-                                                <%=produto.id%>
-                                            </td>
                                             <td><img class="thumb" src="/<%=produto.imagem%>" alt="sem imagem"
                                                     width="100px" height="100px"></td>
                                             <td>
