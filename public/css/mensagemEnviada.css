@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body a {
+    text-decoration: none !important;
+    color: #fff;
+  }
+  
+    
+   /* css da main de contato */
+  .contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  
+  fieldset {
+    border-style: none;
+    padding: 10px;;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto;
+    background-color: red;
+    width: 35%;
+  }
+  
+  form div {
+    padding: 10px;
+  }
+  
+  .nome-completo input {
+    height: 30px;
+    background: #ADBBEE;
+    border: 1px solid #00234B;
+    border-radius: 15px;
+  }
+  
+  .checkbox-contato {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-right: 200px;
+    padding-bottom: 50px;
+  }
+  .button-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 15px;
+  
+  }
+ 
+  #header {
+    background-color: #00234B !important;
+  }
+  
+  #header img {
+    width: 12rem;
+  }
+
+  header a:hover {
+    text-decoration: underline;
+    outline: 1px solid transparent;
+  }
+  
+  footer {
+    background-color: #00234B;
+    color: #fff;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #fff;
+    outline: 1px solid transparent;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    color: rgb(13, 212, 243);
+    outline: 1px solid transparent;
+  }
+  
+  footer img:hover {
+    transform: scale(1.1);
+  }
+  
+  #map iframe {
+    height: 20vh;
+    width: 17.5rem;
+    border-radius: 1rem;
+  }
+  
+  #map span {
+    font-weight: bold;
+  }
+  
+  #redes-sociais a img {
+    width: 10rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }

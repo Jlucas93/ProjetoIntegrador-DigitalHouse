@@ -31,6 +31,10 @@ const homeController = {
   },
   carrinho: (req, res) => {
     res.render("home/carrinho")
-  }
+  },
+  mensagemEnviada: (req, res) => {
+    res.render("home/mensagemEnviada")
+  },
+
 }
 module.exports = homeController
