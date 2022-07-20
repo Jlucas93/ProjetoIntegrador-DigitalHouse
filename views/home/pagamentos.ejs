@@ -5,39 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/pagamentos.css">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>PAGAMENTO</title>
 </head>
 
 <body>
     <!-- HEADER -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="./img/logo.jpeg" alt="logo" />
-            </div>
-            <div class="links">
-                <a href="#">Masculino</a>
-                <a>Feminino</a>
-                <a>Acessórios</a>
-                <a>Calçados</a>
-            </div>
-            <div class="search">
-                <input
-                 type="text"
-                 placeholder="Procurando algo específico?"
-                />
-                <button
-                 type="submit"
-                 >
-                  <img src="./img/seacrh-icon.png" alt="imagem de lupa"/>
-                </button>
-            </div>
-            <div class="Login">
-                <a>Logar</a>
-            </div>
-        </nav>
-    </header>
+    <%- include('../partials/header.ejs') %>
     <!-- HEADER -->
     <!-- produto selecionado -->
     <div class="product-selected">
@@ -95,37 +70,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">        
-        <div class="map">
-            <span>Localização</span>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.98858461134!2d-46.774590985099636!3d-23.532912984697003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce50ab7feb4519%3A0x739f0ddb0439cf94!2sDigital%20House%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1654038624865!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <div class="information">
-            <span>Informações</span>
-            <a href="#">Quem somos?</a>
-            <a href="#">Nossos Parceiros</a>
-        </div>
-
-        <section>
-            <nav class="redesSociais">
-                <p>Redes Sociais</p>
-                <a href="##">Instagram</a>
-                <a href="##">Facebook</a>
-                <a href="##">Linkedin</a>
-            </nav>
-        </section>
-
-        <section>
-            <div class="Contato">
-                <p>Contato</p>
-                <p>Email: <a href="##">projetopi@dh.com.br</a> </p>
-                <p>Telefone: (xx) xxxx-xxxx </p>
-                <p>WhatsApp: (xx) xxxx-xxx</p>
-            </div>
-        </section>
-
-    </footer>
+    <%- include('../partials/footer.ejs') %>
     <!-- FOOTER -->
 
 </body>
