@@ -32,6 +32,12 @@ const admController = {
         }
         return res.render('adm/usuario/registro', { listaDeErros: error.errors, old: req.body })
     },
+    deleteUser: (req, res) => {
+        const { id } = req.params
+        Usuario.delete(id)
+
+        return res.redirect("/adm")
+    },
     perfil: (req, res) => {
         res.render('home/perfil')
     },

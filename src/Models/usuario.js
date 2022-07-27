@@ -32,6 +32,12 @@ const Usuario = {
         usuario.id = geradorDeId()
         dataBase.usuarios.push(usuario)
         store(dataBase)
+    },
+    delete: (id) => {
+        const dataBase = open()
+        const index = dataBase.usuarios.findIndex(usuario => usuario.id === id)
+        dataBase.usuarios.splice(index, 1)
+        store(dataBase)
     }
 }
 module.exports = Usuario

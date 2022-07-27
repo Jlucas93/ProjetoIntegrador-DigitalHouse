@@ -1,4 +1,4 @@
-const Produto = require('../models/produto')
+const Produto = require('../Models/produto')
 
 const produtoContoller = {
     store: (req, res) => {
