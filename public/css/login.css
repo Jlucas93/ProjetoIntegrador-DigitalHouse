@@ -9,8 +9,8 @@ body {
     text-decoration: none!important;
 }
 .login-form {
-    height: 100vh;
-    background-color: #00234B ;
+    height: 120vh;
+    background-color: #7f90a3;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -65,7 +65,7 @@ body {
 .login-form .box .form-fields .input-box span {
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 14px;
     height: 100%;
     width: 40px;
     display: flex;
@@ -115,9 +115,52 @@ body {
     color: #555df0;
 }
 
-@media ( max-width: 500px){
-    .login-form .box{
-        min-width: 100%;
-        padding: 30px;
-    }
-}
+#header {
+    background-color: #00234B !important;
+  }
+
+  #header img {
+    width: 12rem;
+  }
+
+  header a:hover {
+    text-decoration: underline;
+    outline: 1px solid transparent;
+  }
+
+  footer {
+    background-color: #00234B;
+    color: #fff;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #fff;
+    outline: 1px solid transparent;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+    color: rgb(13, 212, 243);
+    outline: 1px solid transparent;
+  }
+
+  footer img:hover {
+    transform: scale(1.1);
+  }
+
+  #map iframe {
+    height: 20vh;
+    width: 17.5rem;
+    border-radius: 1rem;
+  }
+
+  #map span {
+    font-weight: bold;
+  }
+
+  #redes-sociais a img {
+    width: 10rem;
+    height: 3rem;
+    margin-right: 1rem;
+  }
