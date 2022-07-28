@@ -26,7 +26,8 @@ app.use(express.json()); // responsavel pela conversão do inputs para json ou j
 app.use(session({
 	secret: 'my first sesseion',
 	resave: false,
-	saveUninitialized: false
+	saveUninitialized: false,
+	/* cookie: { maxAge: 60000 * 0.5 } */
 }))//Iniciando uma sessao
 
 app.use(homeRouter)
