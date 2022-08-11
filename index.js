@@ -24,10 +24,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // responsavel pela conversão do inputs para json ou js 
 
 app.use(session({
-	secret: 'my first sesseion',
-	resave: false,
-	saveUninitialized: false,
-	/* cookie: { maxAge: 60000 * 0.5 } */
+  secret: 'my first sesseion',
+  resave: false,
+  saveUninitialized: false,
+  /* cookie: { maxAge: 60000 * 0.5 } */
 }))//Iniciando uma sessao
 
 app.use(homeRouter)
@@ -38,5 +38,5 @@ app.use(admRouter)
 
 //Not-Found
 app.use((_req, res, next) => {
-	return res.status(404).render('home/not-found', { error: 'Página não encontrada' });
+  return res.status(404).render('home/not-found', { error: 'Página não encontrada' });
 })
