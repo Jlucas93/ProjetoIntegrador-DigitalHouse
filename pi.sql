@@ -57,5 +57,14 @@ CONSTRAINT `produtos_venda_venda_id_foreign` FOREIGN KEY (`venda_id`) REFERENCES
 CONSTRAINT `produtos_venda_produto_id_foreign` FOREIGN KEY (`produto_id`) REFERENCES `produto` (`id`)
 );
 
-INSERT INTO table_name
-VALUES (value1, value2, value3, ...);
+USE vestuario;
+INSERT INTO produto(nome,preco, tamanho, descricao,estoque,cor, imagem, categoria_id)
+VALUES (
+  'Camisa azul 2', 120,'G','Camisa cor Azul, confortável, ótima oportunidade',
+  20, 'Azul', 'img/produtoExibicao/1656274840114-teste.jpg', 1
+);
+INSERT INTO categoria(nome_categoria)
+VALUES (
+  'calca'
+);
+SELECT * FROM produto

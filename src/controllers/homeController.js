@@ -1,23 +1,35 @@
-const Produto = require("../Models/produto")
+const { Produto } = require("../Models")
 
 const homeController = {
-  index: (req, res) => {
-    const produtos = Produto.findAll()
-    if (req.session.user) {
-      return res.render("home/index", { produtos, user: req.session.user })
+  index: async (req, res) => {
+    try {
+      const produtos = await Produto.findAll()
+
+      if (req.session.user) {
+        return res.render("home/index", { produtos, user: req.session.user })
+      }
+      return res.render("home/index", { produtos })
+    } catch (error) {
+      console.error(error)
+      return res.status(500).JSON({ message: 'Bad Request' })
     }
-    return res.render("home/index", { produtos })
   },
   cadastro: (req, res) => {
     res.render("home/cadastro")
   },
-  produtos: (req, res) => {
+  produtos: async (req, res) => {
     const { id } = req.params
-    const produto = Produto.findById(id)
-    if (!produto) {
-      return res.render("home/not-found", { error: "Produto não encontrado" });
+    try {
+      const produto = await Produto.findByPk(id)
+
+      if (!produto) {
+        return res.render("home/not-found", { error: "Produto não encontrado" });
+      }
+      return res.render("home/detalhes", { produto })
+    } catch (error) {
+      console.error(error)
+      return res.status(500).JSON({ message: 'Bad Request' })
     }
-    return res.render("home/detalhes", { produto })
   },
   contato: (req, res) => {
     res.render("home/Contato")
