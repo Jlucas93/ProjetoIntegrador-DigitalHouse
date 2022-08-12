@@ -56,3 +56,6 @@ CONSTRAINT `produtos_venda_venda_id_foreign` FOREIGN KEY (`venda_id`) REFERENCES
 /* KEY `produtos_venda_produto_id_foreign` (`produto_id`), */
 CONSTRAINT `produtos_venda_produto_id_foreign` FOREIGN KEY (`produto_id`) REFERENCES `produto` (`id`)
 );
+
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
