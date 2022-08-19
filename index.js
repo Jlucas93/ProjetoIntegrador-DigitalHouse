@@ -1,6 +1,9 @@
 const express = require('express');
-const app = express();
+const path = require('path');
 const methodOverride = require('method-override');
+
+const app = express();
+
 const session = require('express-session')
 
 //Rotes
@@ -18,13 +21,17 @@ app.listen(port, () => console.log('Server started on port ' + port))
 //Express
 app.use(methodOverride('_method'));
 app.use(express.static('public')); // tornando o acesso publico da pasta
+
 app.set('view engine', 'ejs'); //estabelcer a engine como ejs
 app.set('views', './src/views'); // padrão o express já configurar a pasta views
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json()); // responsavel pela conversão do inputs para json ou js 
 
+app.use(express.static(path.resolve(__dirname, '../public')));
+
 app.use(session({
-  secret: 'my first sesseion',
+  secret: 'my first session',
   resave: false,
   saveUninitialized: false,
   /* cookie: { maxAge: 60000 * 0.5 } */

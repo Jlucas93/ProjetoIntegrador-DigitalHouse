@@ -11,4 +11,6 @@ router.get("/cadastro", AuthController.createUser)
 router.post("/cadastro", validarCadastro, AuthController.storeUser)
 router.get("/logout", AuthController.logout)
 
+
+// router.get("/cadastro/add")
 module.exports = router;

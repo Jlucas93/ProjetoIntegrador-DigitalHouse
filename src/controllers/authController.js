@@ -1,4 +1,4 @@
-const Usuario = require('../usuario');
+const { Usuario } = require('../Models');
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcrypt');
 
@@ -9,29 +9,52 @@ const authController = {
   createUser: (req, res) => {
     return res.render("home/cadastro");
   },
-  storeUser: (req, res) => {
+  storeUser: async (req, res) => {
+    console.log("req.body", req.body);
+
     let error = validationResult(req)
     if (error.isEmpty()) {
       const {
         nome,
         sobrenome,
         email,
-        senha,
-        admin
+        password,
+        cpf,
+        telefone,
+        cep,
+        cidade,
+        estado,
+        rua,
+        bairro,
+        numero,
+        complemento
+        // admin
       } = req.body
-      const isRegistered = Usuario.findByEmail(email);
+      const isRegistered = await Usuario.findOne({ where: { email: email} })
       if (isRegistered) {
         return res.render("home/cadastro", { error: 'Email já registrado' });
       }
-      const cryptSenha = bcrypt.hashSync(senha, 10)
+      const cryptSenha = bcrypt.hashSync(password, 10)
       const user = {
         nome,
         sobrenome,
         email,
-        senha: cryptSenha,
-        admin: (admin ? true : false)
+        password: cryptSenha,
+        cpf,
+        telefone,
+        cep,
+        cidade,
+        estado,
+        rua,
+        bairro,
+        numero,
+        complemento
+        // admin: (admin ? true : false)
       }
-      Usuario.save(user)
+
+      
+      await Usuario.create(user);
+
       return res.redirect('/')
     }
     return res.render('home/cadastro', { listaDeErros: error.errors, old: req.body })
