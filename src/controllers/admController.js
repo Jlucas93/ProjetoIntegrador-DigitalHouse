@@ -1,4 +1,4 @@
-const Usuario = require('../usuario');
+const { Usuario }  = require('../Models');
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcrypt');
 
@@ -9,7 +9,18 @@ const admController = {
   createUser: (req, res) => {
     res.render('adm/usuario/registro')
   },
-  postUser: (req, res) => {
+  postUser: async (req, res) => {
+    const {nome, sobrenome, email, senha, confirmacaoSenha, admin } = req.body;
+    
+    const hash = bcrypt.hashSync(password, 10);    
+     const usuario = await Usuario.create({
+      nome,
+      sobrenome,
+      email,
+      senha: hash,
+      confirmacaoSenha,
+      adm
+    })
     let error = validationResult(req)
     if (error.isEmpty()) {
       const {

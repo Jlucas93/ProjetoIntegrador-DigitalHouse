@@ -4,6 +4,7 @@ CREATE DATABASE vestuario
 USE vestuario;
 CREATE TABLE `usuarios` (  
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`nome` varchar(100) NOT NULL,
 `sobrenome` varchar(100) NOT NULL,
 `email` varchar(150) NOT NULL,
 `cpf` varchar(15) NOT NULL,

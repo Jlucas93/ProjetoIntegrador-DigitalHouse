@@ -1,4 +1,4 @@
-const { Produto } = require("../Models")
+const { Produto } = require("../Models/")
 
 const homeController = {
   index: async (req, res) => {
