@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       unique: true
     },
-    password:{
+    senha: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -30,7 +30,8 @@ module.exports = (sequelize, DataTypes) => {
     rua: DataTypes.INTEGER,
     bairro: DataTypes.INTEGER,
     numero: DataTypes.STRING,
-    complemento: DataTypes.INTEGER
+    complemento: DataTypes.INTEGER,
+    isAdmin: DataTypes.BOOLEAN
 
   }, {
     timestamps: false,

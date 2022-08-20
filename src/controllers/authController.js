@@ -11,7 +11,6 @@ const authController = {
   },
   storeUser: async (req, res) => {
     console.log("req.body", req.body);
-
     let error = validationResult(req)
     if (error.isEmpty()) {
       const {
@@ -27,15 +26,15 @@ const authController = {
         rua,
         bairro,
         numero,
-        complemento
-        // admin
+        complemento,
+        admin
       } = req.body
-      const isRegistered = await Usuario.findOne({ where: { email: email} })
+      const isRegistered = await Usuario.findOne({ where: { email: email } })
       if (isRegistered) {
         return res.render("home/cadastro", { error: 'Email já registrado' });
       }
       const cryptSenha = bcrypt.hashSync(password, 10)
-      const user = {
+      await Usuario.create({
         nome,
         sobrenome,
         email,
@@ -48,27 +47,28 @@ const authController = {
         rua,
         bairro,
         numero,
-        complemento
-        // admin: (admin ? true : false)
-      }
-
-      
-      await Usuario.create(user);
+        complemento,
+        isAdmin: (admin ? true : false)
+      });
 
       return res.redirect('/')
     }
     return res.render('home/cadastro', { listaDeErros: error.errors, old: req.body })
   },
-  postLogin: (req, res) => {
+  postLogin: async (req, res) => {
     const {
       email,
       senha
     } = req.body;
 
-    const user = Usuario.findByEmail(email);
+    const user = await Usuario.findOne({ where: { email: email } });
+    console.log(user.senha)
 
-    if (!user || !bcrypt.compareSync(senha, user.senha)) {
-      return res.render("home/login", { error: "Email ou senha estão incorretos ou não existe." });
+    if (!user) {
+      return res.render("home/login", { error: "Email está  incorreto ou não existe." });
+    }
+    if (!bcrypt.compareSync(senha, user.senha)) {
+      return res.render("home/login", { error: "Senha está incorreta ou não existe." });
     }
     req.session.user = user;
     return res.redirect("/");

@@ -1,4 +1,4 @@
-const { Usuario }  = require('../Models');
+const { Usuario } = require('../Models');
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcrypt');
 
@@ -10,17 +10,6 @@ const admController = {
     res.render('adm/usuario/registro')
   },
   postUser: async (req, res) => {
-    const {nome, sobrenome, email, senha, confirmacaoSenha, admin } = req.body;
-    
-    const hash = bcrypt.hashSync(password, 10);    
-     const usuario = await Usuario.create({
-      nome,
-      sobrenome,
-      email,
-      senha: hash,
-      confirmacaoSenha,
-      adm
-    })
     let error = validationResult(req)
     if (error.isEmpty()) {
       const {
@@ -28,32 +17,53 @@ const admController = {
         sobrenome,
         email,
         senha,
+        cpf,
+        telefone,
+        cep,
+        cidade,
+        estado,
+        rua,
+        bairro,
+        numero,
+        complemento,
         admin
       } = req.body
       const cryptSenha = bcrypt.hashSync(senha, 10)
-      const user = {
+      await Usuario.create({
         nome,
         sobrenome,
         email,
-        senha: cryptSenha,
-        admin: (admin ? true : false)
-      }
-      Usuario.save(user)
+        password: cryptSenha,
+        cpf,
+        telefone,
+        cep,
+        cidade,
+        estado,
+        rua,
+        bairro,
+        numero,
+        complemento,
+        isAdmin: admin ? true : false
+      })
       return res.redirect('/adm')
     }
     return res.render('adm/usuario/registro', { listaDeErros: error.errors, old: req.body })
   },
-  deleteUser: (req, res) => {
+  deleteUser: async (req, res) => {
     const { id } = req.params
-    Usuario.delete(id)
+    await Usuario.destroy({
+      where: {
+        id
+      }
+    });
 
     return res.redirect("/adm")
   },
   perfil: (req, res) => {
     res.render('home/perfil')
   },
-  userList: (req, res) => {
-    const users = Usuario.findAll()
+  userList: async (req, res) => {
+    const users = await Usuario.findAll()
     res.render('adm/usuario/users', { users })
   }
 }

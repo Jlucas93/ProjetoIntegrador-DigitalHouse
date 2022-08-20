@@ -1,12 +1,16 @@
--- Active: 1656277622131@@127.0.0.1@3306@crud
+-- Active: 1656277622131@@127.0.0.1@3306@vestuario
+
 CREATE DATABASE vestuario
     DEFAULT CHARACTER SET = 'utf8mb4';
 USE vestuario;
+
+
 CREATE TABLE `usuarios` (  
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 `nome` varchar(100) NOT NULL,
 `sobrenome` varchar(100) NOT NULL,
 `email` varchar(150) NOT NULL,
+`senha` varchar(150) NOT NULL,
 `cpf` varchar(15) NOT NULL,
 `telefone` varchar(50) NOT NULL,
 `cep` INT(10) NOT NULL,
@@ -16,8 +20,15 @@ CREATE TABLE `usuarios` (
 `bairro` varchar(200) NOT NULL,
 `numero` INT(10) NOT NULL,
 `complemento` TEXT,
+`isAdmin` BOOLEAN,
 PRIMARY KEY (`id`)
 );
+CREATE TABLE `categoria` (
+`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`nome_categoria` VARCHAR(50) NOT NULL,
+PRIMARY KEY (`id`)
+);
+
  CREATE TABLE `vendas` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 `usuario_id` int(10) UNSIGNED NOT NULL,
@@ -27,15 +38,11 @@ PRIMARY KEY (`id`),
 /* KEY `vendas_usuario_id_foreign` (`usuario_id`), */
 CONSTRAINT `vendas_usuario_id_foreign` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`)
 );
-CREATE TABLE `categoria` (
-`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-`nome_categoria` VARCHAR(50) NOT NULL,
-PRIMARY KEY (`id`)
-);
+
 CREATE TABLE `produto`(
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 `nome` varchar (100) NOT NULL,
-`preço` DECIMAL (5, 2) NOT NULL,
+`preco` DECIMAL (5, 2) NOT NULL,
 `tamanho` VARCHAR (50) NOT NULL,
 `cor` VARCHAR (50) NOT NULL,
 `imagem` VARCHAR (200) NOT NULL,
@@ -43,7 +50,6 @@ CREATE TABLE `produto`(
 `categoria_id` INT(10) UNSIGNED NOT NULL,
 `descricao` TEXT,
 PRIMARY KEY (`id`),
-/* KEY `produto_categoria_foreign` (`categoria_id`), */
     CONSTRAINT `produto_categoria_foreign`  FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`)
 );
 
@@ -54,18 +60,36 @@ CREATE TABLE `produtos_venda` (
 PRIMARY KEY (`id`),
 KEY `produtos_venda_venda_id_foreign` (`venda_id`),
 CONSTRAINT `produtos_venda_venda_id_foreign` FOREIGN KEY (`venda_id`) REFERENCES `vendas` (`id`),
-/* KEY `produtos_venda_produto_id_foreign` (`produto_id`), */
 CONSTRAINT `produtos_venda_produto_id_foreign` FOREIGN KEY (`produto_id`) REFERENCES `produto` (`id`)
 );
 
-USE vestuario;
 INSERT INTO produto(nome,preco, tamanho, descricao,estoque,cor, imagem, categoria_id)
 VALUES (
   'Camisa azul 2', 120,'G','Camisa cor Azul, confortável, ótima oportunidade',
   20, 'Azul', 'img/produtoExibicao/1656274840114-teste.jpg', 1
 );
+INSERT INTO produto(nome,preco, tamanho, descricao,estoque,cor, imagem, categoria_id)
+VALUES (
+  'Camisa azul', 150,'M','Camisa cor Azul, confortável, ótima oportunidade',
+  10, 'Azul', 'img/camisa_1.jpeg', 2
+);
+
+
+
+
 INSERT INTO categoria(nome_categoria)
 VALUES (
-  'calca'
+  'camisa'
 );
-SELECT * FROM produto
+SELECT * FROM produto;
+
+ALTER TABLE usuarios
+ADD senha varchar(255) NOT NULL;
+
+INSERT INTO usuarios(nome,sobrenome,email,cpf,telefone,cep,cidade,estado,rua,bairro,numero,isAdmin,senha)
+VALUES (
+   'Lucas', 'Andrade', 'lucas@admin.com', '1111111', '7199999999', '4000000', 'salvador', 'BA',
+    'Rua', 'Bairro', 100, true, '$2b$10$amXk.Rqcvev2Enz8FKXuzur9Zp/OSYtK61NFlobEljVsvPnTaNXDC'
+);
+
+SELECT * FROM usuarios;
