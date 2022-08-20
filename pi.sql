@@ -1,4 +1,4 @@
--- Active: 1656277622131@@127.0.0.1@3306@vestuario
+-- Active: 1661006723728@@127.0.0.1@3306@pi
 
 CREATE DATABASE vestuario
     DEFAULT CHARACTER SET = 'utf8mb4';
@@ -93,3 +93,12 @@ VALUES (
 );
 
 SELECT * FROM usuarios;
+
+CREATE TABLE `endereco` (
+  `cep` int(10) NOT NULL,
+  `cidade` VARCHAR(50) NOT NULL,
+  `rua` VARCHAR(200) NOT NULL,
+  `bairro` VARCHAR(200) NOT NULL,
+  `numero` int(10) NOT NULL,
+  `Complemento` text(200)
+)
