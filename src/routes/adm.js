@@ -12,7 +12,10 @@ router.get('/adm', admController.index)
 router.get('/adm/usuario/listausuarios', admController.userList)
 router.get('/adm/usuario/registro', admController.createUser)
 router.post('/adm/usuario/registro', admController.postUser)
-router.delete('/adm//usuario/remover/:id', admController.deleteUser)
+router.delete('/adm/usuario/remover/:id', admController.deleteUser)
+
+router.get('/produto/listaprodutos', admController.produtoList)
+
 router.get('/perfil', admController.perfil)
 
 module.exports = router 

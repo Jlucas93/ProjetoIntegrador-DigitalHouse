@@ -10,13 +10,12 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     tamanho: DataTypes.STRING,
-
     cor: DataTypes.STRING,
     imagem: DataTypes.STRING,
     estoque: DataTypes.INTEGER,
+    preco: DataTypes.INTEGER,
     categoria_id: DataTypes.INTEGER,
     descricao: DataTypes.STRING,
-    preco: DataTypes.INTEGER
   }, {
     timestamps: false,
     tableName: 'produto'

@@ -1,4 +1,4 @@
-const { Usuario } = require('../Models');
+const { Usuario, Produto } = require('../Models');
 const { validationResult } = require('express-validator')
 const bcrypt = require('bcrypt');
 
@@ -65,6 +65,10 @@ const admController = {
   userList: async (req, res) => {
     const users = await Usuario.findAll()
     res.render('adm/usuario/users', { users })
+  },
+  produtoList: async (req, res) => {
+    const produtos = await Produto.findAll()
+    res.render('adm/produto/produtos', { produtos })
   }
 }
 

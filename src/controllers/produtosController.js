@@ -1,43 +1,28 @@
-const { Produto } = require('../Models')
+const { Produto, Categoria } = require('../Models')
 
 const produtoContoller = {
   store: async (req, res) => {
     const {
       nome,
-      tamanhoP,
-      tamanhoM,
-      tamanhoG,
-      preco,
       cor,
+      preco,
       estoque,
-      descricao,
-
+      tamanho,
+      categoria,
+      descricao
     } = req.body
+    console.log('ID DA CATEGORIA', categoria)
     try {
-      const produto = {
-        nome,
-        imagem: 'img/produtoExibicao/' + req.file.filename,
-        tamanhoP: !!tamanhoP,
-        tamanhoM: !!tamanhoM,
-        tamanhoG: !!tamanhoG,
-        preco,
-        cor,
-        estoque,
-        descricao
-      }
       await Produto.create({
         nome,
-        imagem,
-        preco,
         cor,
+        imagem: 'img/produtoExibicao/' + req.file.filename,
+        preco,
         estoque,
-        tamanhoP,
-        tamanhoM,
-        tamanhoG,
+        tamanho,
+        categoria_id: categoria,
         descricao
       })
-      console.log(produto)
-
       return res.redirect('/adm')
 
     } catch (error) {
@@ -45,22 +30,24 @@ const produtoContoller = {
     }
 
   },
-  createProduto: (req, res) => {
-    res.render('adm/produto/cadastro')
+  createProduto: async (req, res) => {
+    const categorias = await Categoria.findAll()
+    res.render('adm/produto/cadastro', { categorias })
   },
   showOneProduct: async (req, res) => {
     const { id } = req.params;
-    const produto = await Produto.findById(id);
+    const produto = await await Produto.findOne({ where: { id: id } });
     return res.render("adm/produtos/detalhes", { produto });
   },
-  showEditProduct: async (req, res) => {
-    const { id } = req.params;
-    const produto = await Produto.findById(id);
-    return res.render("adm/produtos/editar", { produto });
-  },
+  /*   showEditProduct: async (req, res) => {
+      const { id } = req.params;
+      const produto = await Produto.findOne({ where: { id: id } });
+      return res.render("adm/produtos/editar", { produto });
+    }, */
   edit: async (req, res) => {
     const { id } = req.params;
-    const { imagem,
+    const {
+      imagem,
       nome,
       preco,
       ativo,
@@ -95,7 +82,7 @@ const produtoContoller = {
         id
       }
     });
-    return res.redirect("/adm/produtos");
+    return res.redirect("/adm");
   }
 }
 
