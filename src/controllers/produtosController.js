@@ -11,7 +11,6 @@ const produtoContoller = {
       categoria,
       descricao
     } = req.body
-    console.log('ID DA CATEGORIA', categoria)
     try {
       await Produto.create({
         nome,
@@ -39,28 +38,35 @@ const produtoContoller = {
     const produto = await await Produto.findOne({ where: { id: id } });
     return res.render("adm/produtos/detalhes", { produto });
   },
-  /*   showEditProduct: async (req, res) => {
-      const { id } = req.params;
-      const produto = await Produto.findOne({ where: { id: id } });
-      return res.render("adm/produtos/editar", { produto });
-    }, */
+  showEditProduct: async (req, res) => {
+    const { id } = req.params;
+    const produto = await Produto.findOne({ where: { id: id } });
+    const categorias = await Categoria.findAll()
+    return res.render("adm/produto/editar", { produto, categorias });
+  },
   edit: async (req, res) => {
+
     const { id } = req.params;
     const {
-      imagem,
       nome,
+      cor,
       preco,
-      ativo,
+      estoque,
+      tamanho,
+      categoria,
       descricao
     } = req.body;
-    try {
 
+    try {
       await Produto.update({
-        nome: nome,
-        imagem: imagem,
-        preco: preco,
-        ativo: ativo,
-        descricao: descricao
+        nome,
+        cor,
+        //imagem: 'img/produtoExibicao/' + req.file.filename,
+        preco,
+        estoque,
+        tamanho,
+        categoria_id: categoria,
+        descricao
 
       },
         {
@@ -69,7 +75,7 @@ const produtoContoller = {
             id: id
           }
         });
-      return res.redirect("/adm/produtos");
+      return res.redirect("/adm");
     } catch (error) {
       return console.log(error);
     }

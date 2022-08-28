@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Produtos</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>ADM</title>
+  </head>
+
+  <body>
+    <%- include('../../partials/header.ejs') %>
+      <main>
+        <section class="produtos">
+          <div class="container">
+            <h1>Editar o Produto</h1>
+            <form method="POST" action="/adm/produto/editar/<%=produto.id%>?_method=PUT" enctype="multipart/form-data">
+<!--               <div class="mb-3">
+                <label for="" class="form-label">Imagem</label>
+                <input  value="<%= produto.imagem%>" type="file" name="imagem" class="form-control">
+              </div> -->
+              <div class="mb-3">
+                <label for="" class="form-label">Nome</label>
+                <input value="<%= produto.nome%>" type="text" name="nome" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Cor</label>
+                <input value="<%= produto.cor%>" type="text" name="cor" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Preço</label>
+                <input value="<%= produto.preco%>" type="number" name="preco" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">estoque</label>
+                <input value="<%= produto.estoque%>" type="number" name="estoque" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Tamanho</label>
+                <input value="<%= produto.tamanho%>" type="text" name="tamanho" class="form-control" required>
+              </div>
+              <select class="form-select mb-3" name="categoria" value="<%=produto.categoria_id%>">
+                <option selected>Escolha uma categoria</option>
+                <% for(let categoria of categorias) {%>
+                  <option value="<%=categoria.id%>">
+                    <%=categoria.nome_categoria%>
+                  </option>
+                  <%}%>
+              </select>
+
+              <div class="mb-3">
+                <textarea name="descricao" class="form-control" cols="15" rows="5" value="<%= produto.descricao%>"
+                  placeholder="Descrição do produto"></textarea>
+              </div>
+              <!--             <span>Tamanho</span>
+              <div class="mb-3">
+                <input name="tamanhoP" type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" name="tamanhoP" for="exampleCheck1">P</label>
+  
+                <input name="tamanhoM" type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" name="tamanhoM" for="exampleCheck1">M</label>
+  
+                <input name="tamanhoG" type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" name="tamanhoG" for="exampleCheck1">G</label>
+              </div> -->
+              <button type="submit" class="btn btn-primary">Salvar</button>
+              <a href="/adm" class="btn btn-primary">Voltar </a>
+            </form>
+          </div>
+        </section>
+      </main>
+      <%- include('../../partials/footer.ejs') %>
+  </body>
+
+  </html>

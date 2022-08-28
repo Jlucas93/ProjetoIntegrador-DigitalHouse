@@ -12,8 +12,8 @@ router.use(isAdm)
 router.get("/cadastro", ProdutosController.createProduto);
 router.post("/cadastro", uploadIMG, ProdutosController.store);
 router.get("/:id", ProdutosController.showOneProduct);
-//router.get("/:id/editar", ProdutosController.showEditProduct);
-router.put("/:id/editar", ProdutosController.edit);
+router.get("/:id/editar", ProdutosController.showEditProduct);
+router.put("/editar/:id", uploadIMG, ProdutosController.edit);
 router.delete("/:id", ProdutosController.delete);
 
 module.exports = router;

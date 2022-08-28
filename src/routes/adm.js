@@ -11,11 +11,13 @@ router.use(isAdm)
 router.get('/adm', admController.index)
 router.get('/adm/usuario/listausuarios', admController.userList)
 router.get('/adm/usuario/registro', admController.createUser)
-router.post('/adm/usuario/registro', admController.postUser)
+
+router.get('/adm/usuario/editar/:id', admController.showEditUser)
+router.put('/adm/usuario/editar/:id', admController.putUser)
+
+router.post('/adm/usuario/cadastro', validarCadastro, admController.postUser)
 router.delete('/adm/usuario/remover/:id', admController.deleteUser)
-
 router.get('/produto/listaprodutos', admController.produtoList)
-
 router.get('/perfil', admController.perfil)
 
 module.exports = router 

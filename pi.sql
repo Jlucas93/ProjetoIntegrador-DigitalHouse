@@ -74,7 +74,7 @@ VALUES (
   10, 'Azul', 'img/camisa_1.jpeg', 2
 );
 
-
+USE vestuario;
 
 
 INSERT INTO categoria(nome_categoria)
