@@ -2,63 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>ADM</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>ADM</title>
 </head>
 
 <body>
-    <%- include('../../partials/header.ejs') %>
-        <main>
-            <section class="produtos">
-                <div class="container">
-                    <h1>Cadastrar novo Produto</h1>
-                    <form method="POST" action="/adm/produto/cadastro" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="" class="form-label">Imagem</label>
-                            <input type="file" name="imagem" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Nome</label>
-                            <input type="text" name="nome" class="form-control" required>
-                        </div>
-                        <span>Tamanho</span>
-                        <div class="mb-3">
-                            <input name="tamanhoP" type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" name="tamanhoP" for="exampleCheck1">P</label>
+  <%- include('../../partials/header.ejs') %>
+    <main>
+      <section class="produtos">
+        <div class="container">
+          <h1>Cadastrar novo Produto</h1>
+          <form method="POST" action="/adm/produto/cadastro" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="" class="form-label">Imagem</label>
+              <input type="file" name="imagem" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Nome</label>
+              <input type="text" name="nome" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Cor</label>
+              <input type="text" name="cor" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Preço</label>
+              <input type="number" name="preco" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">estoque</label>
+              <input type="number" name="estoque" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Tamanho</label>
+              <input type="text" name="tamanho" class="form-control" required>
+            </div>
+            <select class="form-select mb-3" name="categoria">
+              <option selected>Escolha uma categoria</option>
+              <% for(let categoria of categorias) {%>
+                <option value="<%=categoria.id%>">
+                  <%=categoria.nome_categoria%>
+                </option>
+                <%}%>
+            </select>
 
-                            <input name="tamanhoM" type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" name="tamanhoM" for="exampleCheck1">M</label>
+            <div class="mb-3">
+              <textarea name="descricao" class="form-control" cols="15" rows="5"
+                placeholder="Descrição do produto"></textarea>
+            </div>
+<!--             <span>Tamanho</span>
+            <div class="mb-3">
+              <input name="tamanhoP" type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" name="tamanhoP" for="exampleCheck1">P</label>
 
+              <input name="tamanhoM" type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" name="tamanhoM" for="exampleCheck1">M</label>
 
-                            <input name="tamanhoG" type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" name="tamanhoG" for="exampleCheck1">G</label>
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Preço</label>
-                            <input type="number" name="preco" class="form-control" required>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input name="estoque" type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" name="estoque" for="exampleCheck1">Em estoque</label>
-                        </div>
-
-                        <div class="mb-3">
-                            <textarea name="descricao" class="form-control" cols="15" rows="5"
-                                placeholder="Descrição do produto"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Salvar</button>
-                        <a href="/adm" class="btn btn-primary">Voltar </a>
-                    </form>
-                </div>
-            </section>
-        </main>
-        <%- include('../../partials/footer.ejs') %>
+              <input name="tamanhoG" type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" name="tamanhoG" for="exampleCheck1">G</label>
+            </div> -->
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="/adm" class="btn btn-primary">Voltar </a>
+          </form>
+        </div>
+      </section>
+    </main>
+    <%- include('../../partials/footer.ejs') %>
 </body>
 
 </html>

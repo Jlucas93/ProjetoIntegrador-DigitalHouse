@@ -13,7 +13,7 @@ const validarCadastro = [
     .withMessage('A senha deve ter mais de 5 caracteres'),
   body('confirmacaoSenha')
     .custom((value, { req }) => {
-      if (value !== req.body.password) {
+      if (value !== req.body.senha) {
         throw new Error("Senhas não conferem")
       }
       return true

@@ -62,7 +62,6 @@ const authController = {
     } = req.body;
 
     const user = await Usuario.findOne({ where: { email: email } });
-    console.log(user.senha)
 
     if (!user) {
       return res.render("home/login", { error: "Email está  incorreto ou não existe." });
