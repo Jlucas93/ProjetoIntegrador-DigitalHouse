@@ -10,7 +10,6 @@ const authController = {
     return res.render("home/cadastro");
   },
   storeUser: async (req, res) => {
-    console.log("req.body", req.body);
     let error = validationResult(req)
     if (error.isEmpty()) {
       const {
