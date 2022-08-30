@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+-- Active: 1656371272378@@127.0.0.1@3306@vestuario
+=======
 -- Active: 1656277622131@@127.0.0.1@3306@dhgram
+>>>>>>> c553c8a199c093aa0c0f24ee32c0c582a1f3e3c6
 
 CREATE DATABASE vestuario
     DEFAULT CHARACTER SET = 'utf8mb4';
