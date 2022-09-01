@@ -33,7 +33,7 @@
           <div class="container">
             <h1>Editar o Produto</h1>
             <form method="POST" action="/adm/produto/editar/<%=produto.id%>?_method=PUT" enctype="multipart/form-data">
-<!--               <div class="mb-3">
+              <!--               <div class="mb-3">
                 <label for="" class="form-label">Imagem</label>
                 <input  value="<%= produto.imagem%>" type="file" name="imagem" class="form-control">
               </div> -->
@@ -58,10 +58,9 @@
                 <input value="<%= produto.tamanho%>" type="text" name="tamanho" class="form-control" required>
               </div>
               <select class="form-select mb-3" name="categoria" value="<%=produto.categoria_id%>">
-                <option selected>Escolha uma categoria</option>
                 <% for(let categoria of categorias) {%>
-                  <option value="<%=categoria.id%>">
-                    <%=categoria.nome_categoria%>
+                  <option <%=categoria.id==produto.categoria_id ? 'selected' : '' %> value="<%=categoria.id%>">
+                      <%=categoria.nome_categoria%>
                   </option>
                   <%}%>
               </select>

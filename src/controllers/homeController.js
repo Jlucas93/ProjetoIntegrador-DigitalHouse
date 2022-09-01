@@ -25,7 +25,7 @@ const homeController = {
       if (!produto) {
         return res.render("home/not-found", { error: "Produto não encontrado" });
       }
-      return res.render("home/detalhes", { produto })
+      return res.render("home/detalhes", { produto, user: req.session.user })
     } catch (error) {
       console.error(error)
       return res.status(500).JSON({ message: 'Bad Request' })
