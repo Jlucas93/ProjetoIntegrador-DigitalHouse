@@ -4,7 +4,6 @@ const homeController = {
   index: async (req, res) => {
     try {
       const produtos = await Produto.findAll()
-
       if (req.session.user) {
         return res.render("home/index", { produtos, user: req.session.user })
       }
