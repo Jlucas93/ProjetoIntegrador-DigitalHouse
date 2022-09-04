@@ -33,7 +33,6 @@ const homeController = {
   contato: (req, res) => {
     res.render("home/Contato")
   },
-
   perfil: (req, res) => {
     res.render("home/perfil")
   },
@@ -46,6 +45,23 @@ const homeController = {
   mensagemEnviada: (req, res) => {
     res.render("home/mensagemEnviada")
   },
+
+  produtosMasculino: (req, res) => {
+    res.render("home/produtosMasculino")
+  },
+
+  produtosFeminino: (req, res) => {
+    res.render("home/produtosFeminino")
+  },
+
+  produtosAcessorios: (req, res) => {
+    res.render("home/produtosAcessorios")
+  },
+
+  produtosCalcados: (req, res) => {
+    res.render("home/produtosCalcados")
+  },
+
 
 }
 module.exports = homeController
