@@ -116,9 +116,7 @@ const admController = {
 
     return res.redirect("/adm")
   },
-  perfil: (req, res) => {
-    res.render('home/perfil')
-  },
+  
   userList: async (req, res) => {
     const users = await Usuario.findAll()
     res.render('adm/usuario/users', { users })

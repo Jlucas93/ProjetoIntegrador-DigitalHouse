@@ -4,7 +4,8 @@ const admController = require('../controllers/admController')
 
 const validarCadastro = require('../middlewares/validarCadastro')
 const isLogged = require('../middlewares/isLogged')
-const isAdm = require('../middlewares/isAdm')
+const isAdm = require('../middlewares/isAdm');
+const authController = require('../controllers/AuthController');
 
 router.use(isLogged)
 router.use(isAdm)
@@ -18,6 +19,6 @@ router.put('/adm/usuario/editar/:id', admController.putUser)
 router.post('/adm/usuario/cadastro', validarCadastro, admController.postUser)
 router.delete('/adm/usuario/remover/:id', admController.deleteUser)
 router.get('/produto/listaprodutos', admController.produtoList)
-router.get('/perfil', admController.perfil)
+
 
 module.exports = router 

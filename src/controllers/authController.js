@@ -6,6 +6,36 @@ const authController = {
   login: (req, res) => {
     return res.render("home/login");
   },
+  perfil: (req, res) => {
+    res.render('home/perfil', {user: req.session.user})
+  },
+  meusDados: (req, res) => {
+  res.render('home/meusDados', {user: req.session.user})
+},
+atualizarDados: async(req, res) => {
+  const {id, nome, sobrenome, cpf, telefone, cep, cidade, estado, rua, bairro, numero, complemento
+      } = req.body;
+      await Usuario.update({
+      nome, 
+      sobrenome, 
+      cpf, 
+      telefone, 
+      cep, 
+      cidade, 
+      estado, 
+      rua, 
+      bairro, 
+      numero, 
+      complemento, 
+      
+},{
+    where: { id }}
+  )
+
+  const user = await Usuario.findOne({ where: { id: id } })
+  req.session.user = user;
+  res.render('home/meusDados', {user: user})
+},
   createUser: (req, res) => {
     return res.render("home/cadastro");
   },
@@ -16,7 +46,7 @@ const authController = {
         nome,
         sobrenome,
         email,
-        password,
+        senha,
         cpf,
         telefone,
         cep,
@@ -32,12 +62,12 @@ const authController = {
       if (isRegistered) {
         return res.render("home/cadastro", { error: 'Email já registrado' });
       }
-      const cryptSenha = bcrypt.hashSync(password, 10)
+      const cryptSenha = bcrypt.hashSync(senha, 10)
       await Usuario.create({
         nome,
         sobrenome,
         email,
-        password: cryptSenha,
+        senha: cryptSenha,
         cpf,
         telefone,
         cep,
