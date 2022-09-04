@@ -17,6 +17,10 @@ const validarCadastro = [
         throw new Error("Senhas não conferem")
       }
       return true
-    })
+    }),
+  body('cpf')
+    .isLength(11)
+    .withMessage("o número do CPF não é válido")
+  
 ]
 module.exports = validarCadastro
