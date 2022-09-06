@@ -32,45 +32,80 @@ const homeController = {
   },
   contato: (req, res) => {
     const user = req.session.user
-    res.render("home/Contato", { user})
+    res.render("home/Contato", { user })
   },
   perfil: (req, res) => {
     const user = req.session.user
-    res.render("home/perfil", { user})
+    res.render("home/perfil", { user })
   },
   historico: (req, res) => {
     const user = req.session.user
-    res.render("home/historico", { user})
+    res.render("home/historico", { user })
   },
   carrinho: (req, res) => {
     const user = req.session.user
-    res.render("home/carrinho", { user})
+    res.render("home/carrinho", { user })
   },
   mensagemEnviada: (req, res) => {
     const user = req.session.user
-    res.render("home/mensagemEnviada", { user})
+    res.render("home/mensagemEnviada", { user })
   },
 
-  produtosMasculino: (req, res) => {
+  produtosMasculino: async (req, res) => {
     const user = req.session.user
-    res.render("home/produtosMasculino", { user})
+    try {
+      const produtos = await Produto.findAll({
+        where: { categoria_id: 2 }
+      })
+      console.log(produtos)
+      return res.render("home/produtosMasculino", { user })
+    } catch (error) {
+      console.log(error)
+      return res.status(500).json({ message: 'Bad Request' })
+    }
   },
 
-  produtosFeminino: (req, res) => {
+  produtosFeminino: async (req, res) => {
     const user = req.session.user
-    res.render("home/produtosFeminino", { user})
+    try {
+      const produtos = await Produto.findAll({
+        where: { categoria_id: 2 }
+      })
+      console.log(produtos)
+      return res.render("home/produtosFeminino", { user })
+    } catch (error) {
+      console.log(error)
+      return res.status(500).json({ message: 'Bad Request' })
+    }
   },
 
-  produtosAcessorios: (req, res) => {
+  produtosAcessorios: async (req, res) => {
     const user = req.session.user
-    res.render("home/produtosAcessorios", { user})
+    try {
+      const produtos = await Produto.findAll({
+        where: { categoria_id: 2 }
+      })
+      console.log(produtos)
+      return res.render("home/produtosAcessorios", { user })
+    } catch (error) {
+      console.log(error)
+      return res.status(500).json({ message: 'Bad Request' })
+    }
   },
 
-  produtosCalcados: (req, res) => {
+  produtosCalcados: async (req, res) => {
     const user = req.session.user
-    res.render("home/produtosCalcados", { user})
+    try {
+      const produtos = await Produto.findAll({
+        where: { categoria_id: 2 }
+      })
+      console.log(produtos)
+      return res.render("home/produtosCalcados", { user })
+    } catch (error) {
+      console.log(error)
+      return res.status(500).json({ message: 'Bad Request' })
+    }
   },
-
 
 }
 module.exports = homeController
