@@ -31,35 +31,44 @@ const homeController = {
     }
   },
   contato: (req, res) => {
-    res.render("home/Contato")
+    const user = req.session.user
+    res.render("home/Contato", { user})
   },
   perfil: (req, res) => {
-    res.render("home/perfil")
+    const user = req.session.user
+    res.render("home/perfil", { user})
   },
   historico: (req, res) => {
-    res.render("home/historico")
+    const user = req.session.user
+    res.render("home/historico", { user})
   },
   carrinho: (req, res) => {
-    res.render("home/carrinho")
+    const user = req.session.user
+    res.render("home/carrinho", { user})
   },
   mensagemEnviada: (req, res) => {
-    res.render("home/mensagemEnviada")
+    const user = req.session.user
+    res.render("home/mensagemEnviada", { user})
   },
 
   produtosMasculino: (req, res) => {
-    res.render("home/produtosMasculino")
+    const user = req.session.user
+    res.render("home/produtosMasculino", { user})
   },
 
   produtosFeminino: (req, res) => {
-    res.render("home/produtosFeminino")
+    const user = req.session.user
+    res.render("home/produtosFeminino", { user})
   },
 
   produtosAcessorios: (req, res) => {
-    res.render("home/produtosAcessorios")
+    const user = req.session.user
+    res.render("home/produtosAcessorios", { user})
   },
 
   produtosCalcados: (req, res) => {
-    res.render("home/produtosCalcados")
+    const user = req.session.user
+    res.render("home/produtosCalcados", { user})
   },
 
 
