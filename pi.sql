@@ -71,14 +71,17 @@ CREATE TABLE `endereco` (
 
 /*Primeiro vamos usar o banco*/
 USE `vestuario`;
+SELECT * from `usuarios`;
 /*Cadastrando usuário padrão*/
-INSERT INTO `usuários`(id, nome, sobrenome, email,cpf,telefone,cep,cidade,estado,
+INSERT INTO `usuarios`(id, nome, sobrenome, email,cpf,telefone,cep,cidade,estado,
 rua,bairro,numero,complemento,isAdmin,senha) 
-VALUES(10,'Administrador', '', 'admin@admin.com', '123.456.789-00','São Paulo',
- 'São Paulo', 'Avenida Paulista','Centro', 25, 'Avenina paulista 25', true, '123456');
+VALUES(10,'Administrador', '', 'admin@admin.com', '123.456.789-00','11 99999-9999',12345-000,'São Paulo',
+ 'SP', 'Avenida Paulista','Centro', 25, 'Avenina paulista 25', true, '123456');
+INSERT INTO `usuarios`(id, nome, sobrenome, email,cpf,telefone,cep,cidade,estado,
+rua,bairro,numero,complemento,isAdmin,senha) 
+VALUES(11,'Cliente', '', 'cliente@cliente.com', '123.456.789-00','11 99999-9999',12345-000,'São Paulo',
+ 'SP', 'Avenida Paulista','Centro', 25, 'Avenina paulista 25', false, '123456');
 
-INSERT INTO `categoria`(id, nome_categoria)
-VALUES(1, 'masculino');
 /*Criando as categorias para usarmos no produto*/
 INSERT INTO `categoria`(id, nome_categoria)
 VALUES(1, 'masculino');
