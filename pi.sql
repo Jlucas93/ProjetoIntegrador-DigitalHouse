@@ -1,4 +1,4 @@
--- Active: 1656277622131@@127.0.0.1@3306@vestuario
+-- Active: 1661816684381@@127.0.0.1@3306@vestuario
 
 /* Criando tabelas do Banco*/
 CREATE TABLE `usuarios` (  
@@ -75,7 +75,7 @@ SELECT * from `usuarios`;
 /*Cadastrando usuário padrão*/
 INSERT INTO `usuarios`(id, nome, sobrenome, email,cpf,telefone,cep,cidade,estado,
 rua,bairro,numero,complemento,isAdmin,senha) 
-VALUES(10,'Administrador', '', 'admin@admin.com', '123.456.789-00','11 99999-9999',12345-000,'São Paulo',
+VALUES(9,'Administrador', '', 'admin@admin.com', '123.456.789-00','11 99999-9999',12345-000,'São Paulo',
  'SP', 'Avenida Paulista','Centro', 25, 'Avenina paulista 25', true, '123456');
 INSERT INTO `usuarios`(id, nome, sobrenome, email,cpf,telefone,cep,cidade,estado,
 rua,bairro,numero,complemento,isAdmin,senha) 
@@ -215,6 +215,42 @@ VALUES(39,'Sapato feminino','33-36','Vermelho','img/calcado_7.jpg',62,3,
 INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
 VALUES(40,'Bota feminina','33-36','Preto','img/calcado_10.jpg',7,3,
 'Bota feminina', 123);
+/*Cadastrando nosso Acessórios-2*/
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(41,'Anel Masculino','26','Prata','img/anelMasculino1.jpg',10,4,'Anel de prata com detalhe em ouro',340);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(42,'Anel Feminino','24','Prata','img/anelMasculino2.png',5,4,'Anel Prata com Ródio Negro e Safiras Negras',840);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(43,'Anel Masculino','26','Preto','img/anelMasculino3.png',50,4,'Anel de aço inoxidável com detalhe em formato de leão',110);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(44,'Anel Feminino','22','Prata','img/anelMasculino4.jpg',10,4,'Anel de ouro branco com pedra turquesa',960);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(45,'Colar Feminino','30','Prata','img/colarFeminino1.png',15,4,'Colar de ouro branco com pingente em ouro branco e topazio',1960);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(46,'Colar Feminino','25','Prata','img/colarFeminino2.png',40,4,'Colar de prata com perola e topazios',880);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(47,'Colar Feminino','35','Prata','img/colarFeminino3.png',20,4,'Colar de ouro branco com diamantes',2760);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(48,'Colar Feminino','25','Prata','img/colarFeminino4.png',15,4,'Colar de ouro branco com quartzo rosa, rodolita e ametista',1060);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(49,'Colar Masculino','30','Prata','img/colarMasculino2.png',35,4,'Colar de prata e calcedonia verde',350);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(50,'Colar Masculino','22','Marrom/Prata','img/colarMasculino1.jpg',10,4,'Colar de couro com pingente de dragão em prata',160);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(51,'Colar Masculino','35','Prata','img/colarMasculino3.png',15,4,'Colar de prata com pingente circular em prata com rodio negro',475);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(52,'Colar Masculino','30','Prata','img/colarMasculino4.png',20,4,'Colar de prata com pingente retangular e diamantes negros',3460);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(53,'Pulseira Masculina','20','Preta','img/pulseiraMasculina1.png',100,4,'Pulseira de couro preto com detalhe de lobo feito a mão',120);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(54,'Pulseira Masculina','15','Prata','img/pulseiraMasculina2.jpg',144,4,'Pulseira de prata com detalhes em formato de escama',410);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(55,'Pulseira Masculina','30','Preta/Prata','img/pulseiraMasculina3.jpg',300,4,'Pulseira de couro preto com detalhes prateados em sua construção',90);
+INSERT INTO `produto`(id, nome,tamanho,cor,imagem,estoque,categoria_id,descricao,preco)
+VALUES(56,'Pulseira Masculina','30','Prata','img/pulseiraMasculina4.png',10,4,'Bracelete de prata com diamante negro em seu centro',4400);
+
+
+
 
 
 
