@@ -45,12 +45,12 @@ const produtoContoller = {
     return res.render("adm/produto/editar", { produto, categorias });
   },
   edit: async (req, res) => {
-
     const { id } = req.params;
     const {
       nome,
-      cor,
+      imagem,
       preco,
+      cor,
       estoque,
       tamanho,
       categoria,
@@ -61,7 +61,7 @@ const produtoContoller = {
       await Produto.update({
         nome,
         cor,
-        //imagem: 'img/produtoExibicao/' + req.file.filename,
+        imagem,
         preco,
         estoque,
         tamanho,

@@ -55,10 +55,10 @@ const homeController = {
     const user = req.session.user
     try {
       const produtos = await Produto.findAll({
-        where: { categoria_id: 2 }
+        where: { categoria_id: 1 }
       })
       console.log(produtos)
-      return res.render("home/produtosMasculino", { user })
+      return res.render("home/produtosMasculino", { user, produtos })
     } catch (error) {
       console.log(error)
       return res.status(500).json({ message: 'Bad Request' })
@@ -72,7 +72,7 @@ const homeController = {
         where: { categoria_id: 2 }
       })
       console.log(produtos)
-      return res.render("home/produtosFeminino", { user })
+      return res.render("home/produtosFeminino", { user, produtos })
     } catch (error) {
       console.log(error)
       return res.status(500).json({ message: 'Bad Request' })
@@ -83,10 +83,10 @@ const homeController = {
     const user = req.session.user
     try {
       const produtos = await Produto.findAll({
-        where: { categoria_id: 2 }
+        where: { categoria_id: 4 }
       })
       console.log(produtos)
-      return res.render("home/produtosAcessorios", { user })
+      return res.render("home/produtosAcessorios", { user, produtos })
     } catch (error) {
       console.log(error)
       return res.status(500).json({ message: 'Bad Request' })
@@ -97,10 +97,10 @@ const homeController = {
     const user = req.session.user
     try {
       const produtos = await Produto.findAll({
-        where: { categoria_id: 2 }
+        where: { categoria_id: 3 }
       })
       console.log(produtos)
-      return res.render("home/produtosCalcados", { user })
+      return res.render("home/produtosCalcados", { user, produtos })
     } catch (error) {
       console.log(error)
       return res.status(500).json({ message: 'Bad Request' })

@@ -1,139 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/produtos.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Produtos</title>
+  <link rel="stylesheet" href="css/produtos.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Acessórios</title>
 </head>
-<body>
-    <%- include('../partials/header') %>
-    <section>
-        <div class="menu-bar">
-            <ul>
-                <li class="active"><a href="#">Departamento</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="">Feminino</a></li>
-                        <li><a href="">Masculino</a></li>
-                        <li><a href="">Acessórios</a></li>
-                        <li><a href="">Calçados</a></li>
-                    </ul>
-                    </div>
-                </li>
-                <li class="active"><a href="#">Categoria</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="">Feminino</a></li>
-                        <li><a href="">Masculino</a></li>
-                        <li><a href="">Acessórios</a></li>
-                        <li><a href="">Calçados</a></li>
-                    </ul>
-                </div>
-                </li>
-               
-                <li class="active"><a href="#">Tamanho</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="">Feminino</a></li>
-                        <li><a href="">Masculino</a></li>
-                        <li><a href="">Acessórios</a></li>
-                        <li><a href="">Calçados</a></li>
-                    </ul>
-                </div>
-                </li>
-                <li class="active"><a href="#">Gênero</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="">Feminino</a></li>
-                        <li><a href="">Masculino</a></li>
-                        <li><a href="">Acessórios</a></li>
-                        <li><a href="">Calçados</a></li>
-                    </ul>
-                </div>
-                </li>
-                <li class="active"><a href="#">Cor</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="">Feminino</a></li>
-                        <li><a href="">Masculino</a></li>
-                        <li><a href="">Acessórios</a></li>
-                        <li><a href="">Calçados</a></li>
-                    </ul>
-                </div>
-                </li>
-                <li class="active"><a href="#">Preço</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="">Feminino</a></li>
-                        <li><a href="">Masculino</a></li>
-                        <li><a href="">Acessórios</a></li>
-                        <li><a href="">Calçados</a></li>
-                    </ul>
-                </div>    
-                </ul>
-              </li>
-        </div>
-        </section>
-        <nav class="product-filter">
-            <div class="sort">
-                 <div class="collection-sort">
-                    <label>Sort by:</label>
-                    <select>
-                  <option value="/">Featured</option>
-                  <option value="/">Best Selling</option>
-                  <option value="/">Alphabetically, A-Z</option>
-                  <option value="/">Alphabetically, Z-A</option>
-                  <option value="/">Price, low to high</option>
-                  <option value="/">Price, high to low</option>
-                  <option value="/">Date, new to old</option>
-                  <option value="/">Date, old to new</option>
-                </select>
-                </div>
-            </div>
-        </nav>
-        
-        <section class="products">
-                
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="img/gravata.jpg" width="255" height="100%" >
-                </div>
-                <div class="product-info">
-                    <h5>Gravata Borboleta</h5>
-                    <h6>R$ 29,99</h6>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="img/cinto feminino.png" width="255" height="100%" >
-                </div>
-                <div class="product-info">
-                    <h5>Cinto Feminino</h5>
-                    <h6>R$ 108,90</h6>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="img/cinto_masculino.webp" width="255" height="100%" >
-                </div>
-                <div class="product-info">
-                    <h5>Cinto Masculino</h5>
-                    <h6>R$ 99.99</h6>
-                </div>
-            </div>
-            
-        </section>
-       
-        <%- include('../partials/footer') %>
 
-        </body>
-        </html>
+<body>
+  <%- include('../partials/header') %>
+    <main>
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <% for(const produto of produtos) {%>
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img class="bd-placeholder-img card-img-top" src="<%= produto.imagem %>" width="100%"
+                    height="225"></img>
+                  <div class="card-body">
+                    <h3>
+                      <%= produto.nome %>
+                    </h3>
+                    <h4 class="text-muted">R$ <%= produto.preco %>
+                    </h4>
+                    <h2>Descricao: <h5 class="text-muted">
+                        <%= produto.descricao%>
+                      </h5>
+                    </h2>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="/produtos/<%=produto.id%>">
+                          <button type="button" class="btn btn-sm btn-primary">Confira</button>
+                        </a>
+                      </div>
+                      <small class="text-muted"></small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+          </div>
+        </div>
+      </div>
+      </div>
+    </main>
+    <%- include('../partials/footer') %>
+
+</body>
+
+</html>
