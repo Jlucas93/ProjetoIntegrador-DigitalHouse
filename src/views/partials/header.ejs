@@ -23,9 +23,11 @@
               aria-label="Search">
           </form>  
           <div class="text-end">
-            <span>Olá <%= locals.user.nome %></span>
-            <a href="/logout"><i class='fas fa-sign-out-alt'></i></a>
-           <a href="/meusDados" class="btn btn-outline-light me-2">Meus Dados</a>
+            
+            <a href="/meusDados" class="btn btn-outline-light me-2">Meus Dados</a>
+           <a href="/carrinho" class="btn btn-outline-light me-2">Meu carrinho</a>
+          <span>Olá <%= locals.user.nome %></span>
+          <a href="/logout"><i class='fas fa-sign-out-alt'></i></a>
           </div>
           <% } else{ %>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">

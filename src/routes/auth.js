@@ -14,6 +14,8 @@ router.get("/logout", AuthController.logout)
 router.get('/perfil', AuthController.perfil)
 router.get('/meusDados', authController.meusDados)
 router.patch("/atualizar-dados", authController.atualizarDados)
+router.get('/pagamentos', authController.pagamentos)
+router.get('/pagamentoRealizado',authController.pagamentoRealizado)
 
 // router.get("/cadastro/add")
 module.exports = router;

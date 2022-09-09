@@ -2,68 +2,73 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 </head>
 
 <body>
 
-    <%- include('../partials/header.ejs') %>
+  <%- include('../partials/header.ejs') %>
 
-        <main class="">
-            <section class="container">
-                <% if(carrinho.length==0) { %>
-                    <h3>Seu carrinho Vazio ☹️</h3>
-                    <% } else if(carrinho.length> 0) { %>
-                        <h1>Carrinho</h1>
-                        <div class="table-responsive">
-                            <table id="table-cart" class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">imagem</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Quantidade</th>
-                                        <th scope="col">Preço</th>
-                                        <th scope="col">Ações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <% for(let produto of carrinho) {%>
-                                        <tr>
-                                            <td><img class="thumb" src="/<%=produto.imagem%>" alt="sem imagem"
-                                                    width="100px" height="100px"></td>
-                                            <td>
-                                                <%=produto.nome%>
-                                            </td>
-                                            <td>1</td>
-                                            <td>
-                                                R$ <%=produto.preco%>
-                                            </td>
-                                            <td>
-                                                <form action="/carrinho/remover/<%=produto.id%>?_method=DELETE" method="POST">
-                                                    <button type="submit" class="btn btn-danger">Excluir</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                        <%}%>
-                                </tbody>
-                            </table>
-                        </div>
-                        <%}%>
-                            <h2>Total da compra: R$ <%=total%>
-                            </h2>
+    <main class="">
+      <section class="container">
+        <% if(carrinho.length==0) { %>
+          <h3>Seu carrinho Vazio ☹️</h3>
+          <% } else if(carrinho.length> 0) { %>
+            <h1>Carrinho</h1>
+            <div class="table-responsive">
+              <table id="table-cart" class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">imagem</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% for(let produto of carrinho) {%>
+                    <tr>
+                      <td><img class="thumb" src="/<%=produto.imagem%>" alt="sem imagem" width="100px" height="100px">
+                      </td>
+                      <td>
+                        <%=produto.nome%>
+                      </td>
+                      <td>1</td>
+                      <td>
+                        R$ <%=produto.preco%>
+                      </td>
+                      <td>
+                        <form action="/carrinho/remover/<%=produto.id%>?_method=DELETE" method="POST">
+                          <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                      </td>
+                    </tr>
 
-            </section>
+                    <%}%>
+                </tbody>
+                <div>
+                   <a href="/" class="btn btn-primary">Continuar comprando</a>
+                   <a href="/pagamentos" class="btn btn-primary">Finalizar compra </a>
+                </div>
+              </table>
+            </div>
+            <%}%>
+              <h2>Total da compra: R$ <%=total%>
+              </h2>
 
-        </main>
+      </section>
 
-        <%- include('../partials/footer') %>
+    </main>
+
+    <%- include('../partials/footer') %>
 
 </body>
 

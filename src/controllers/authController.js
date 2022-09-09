@@ -7,35 +7,36 @@ const authController = {
     return res.render("home/login");
   },
   perfil: (req, res) => {
-    res.render('home/perfil', {user: req.session.user})
+    res.render('home/perfil', { user: req.session.user })
   },
   meusDados: (req, res) => {
-  res.render('home/meusDados', {user: req.session.user})
-},
-atualizarDados: async(req, res) => {
-  const {id, nome, sobrenome, cpf, telefone, cep, cidade, estado, rua, bairro, numero, complemento
-      } = req.body;
-      await Usuario.update({
-      nome, 
-      sobrenome, 
-      cpf, 
-      telefone, 
-      cep, 
-      cidade, 
-      estado, 
-      rua, 
-      bairro, 
-      numero, 
-      complemento, 
-      
-},{
-    where: { id }}
-  )
+    res.render('home/meusDados', { user: req.session.user })
+  },
+  atualizarDados: async (req, res) => {
+    const { id, nome, sobrenome, cpf, telefone, cep, cidade, estado, rua, bairro, numero, complemento
+    } = req.body;
+    await Usuario.update({
+      nome,
+      sobrenome,
+      cpf,
+      telefone,
+      cep,
+      cidade,
+      estado,
+      rua,
+      bairro,
+      numero,
+      complemento,
 
-  const user = await Usuario.findOne({ where: { id: id } })
-  req.session.user = user;
-  res.render('home/meusDados', {user: user})
-},
+    }, {
+      where: { id }
+    }
+    )
+
+    const user = await Usuario.findOne({ where: { id: id } })
+    req.session.user = user;
+    res.render('home/meusDados', { user: user })
+  },
   createUser: (req, res) => {
     return res.render("home/cadastro");
   },
@@ -100,6 +101,18 @@ atualizarDados: async(req, res) => {
     }
     req.session.user = user;
     return res.redirect("/");
+  },
+  pagamentos: (req, res) => {
+    const { carrinho } = req.session;
+    let total = 0;
+    for (let produto of carrinho) {
+      total += parseFloat(produto.preco)
+      console.log("req.session.total");
+    }
+    res.render('home/pagamentos', { carrinho, total })
+  },
+  pagamentoRealizado: (req, res) => {
+    return res.render('home/pagamentoRealizado')
   },
   logout: (req, res) => {
     req.session.destroy((error) => {

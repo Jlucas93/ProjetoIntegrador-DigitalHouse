@@ -3,75 +3,94 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <title>PAGAMENTO</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>Cadastro</title>
 </head>
 
 <body>
     <!-- HEADER -->
-    <%- include('../partials/header.ejs') %>
-    <!-- HEADER -->
-    <!-- produto selecionado -->
-    <div class="product-selected">
-     
-    </div>
-    <!-- produto selecionado -->
-    <!-- form do pagamento -->
-    <section class="payment">
-        <div class="payment-result">
-            <p> Total:</p>
-            <!-- valores dos produtos -->
-            <p> R$ 325,00 </p>
-            <!-- valores dos produtos -->
-        </div>
+      <%- include('../partials/header.ejs') %>
+        <div class="row" style="margin: 190px;">
+        <div class="mb-4">
+            <div class="alert alert-primary text-center" style="margin-top: 30px ;" role="alert">
+  Carrinho
+</div>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+          <ul class="list-group mb-3">
+            <% for(let produto of carrinho) {%>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0"><%= produto.nome %> </h6>
+              </div>
+              <span class="text-muted">R$ <%= produto.preco%>,00 </span>
+            </li>
+            <% } %> 
 
-            <div class="parcelas">
-                <form method="post" action="?">
-
-                    <label for="parcelas">Deseja parcelar?</label>
-                    <select>
-                        <option value="parcelas">1x R$325,00 = R$325,00</option>
-                        <option value="parcelas">2x R$325,00 = R$162,50</option>
-                        <option value="parcelas">3x R$325,00 = R$108,33</option>
-                        <option value="parcelas">4x R$325, = R$81,25</option>
-                        <option value="parcelas">5x R$325, = R$65,00</option>
-                        <option value="parcelas">6x R$325, = R$54,16</option>
-                        <option value="parcelas">7x R$325, = R$46,42</option>
-                        <option value="parcelas">8x R$325, = R$40,62</option>
-                        <option value="parcelas">9x R$325, = R$36,11</option>
-                        <option value="parcelas">10x R$325, = R$32,50</option>
-                    </select>
-
-                </form>
+           
+            <li class="list-group-item d-flex justify-content-between">
+              <span class="btn btn-primary">Total (BRL)</span>
+              <strong>R$ <%= total %> ,00 </strong>
+            </li>
+            <div class="container">
+<div class="alert alert-primary text-center" style="margin-top: 30px ;" role="alert">
+  Pagamento
+</div>
+            <h4 class="mb-3" style="margin:center">Pagamento</h4>
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credito" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+                <label class="custom-control-label" for="credito">Cartão de crédito</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debito" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                <label class="custom-control-label" for="debito">Cartão de débito</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+                <label class="custom-control-label" for="paypal">PayPal</label>
+              </div>
             </div>
-        <!-- form do pagamento -->
-    </section>
-
-    <section class="payment-card">
-        <form method="post" action="?">
-            <label for="card-number">Número do cartão </label>
-            <input type="text" name="card-number" id="card-number">
-
-            <label for="name-card">titular do cartão</label>
-            <input type="text" name="name-card" id="name-card">
-
-            <label for="expiration-date">Data de validade</label>
-            <input type="text" name="expiration-date" id="expiration-date">
-
-            <label for="card-cvv">CVV</label>
-            <input type="text" name="card-cvv" id="card-cvv">
-
-            <label for="card-address">Endereço do Cartão</label>
-            <input type="text" name="card-address" id="card-address">
-        </form>
-    </section>
-
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cc-nome">Nome no cartão</label>
+                <input type="text" class="form-control" id="cc-nome" placeholder="" required="">
+                <small class="text-muted">Nome completo, como mostrado no cartão.</small>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-numero">Número do cartão de crédito</label>
+                <input type="text" class="form-control" id="cc-numero" placeholder="" required="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiracao">Data de expiração</label>
+                <input type="text" class="form-control" id="cc-expiracao" placeholder="" required="">
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-cvv">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+              </div>
+            </div>
+            <hr class="mb-4">
+            <button href="home/pagamentoRealizado" class="btn btn-primary btn-lg btn-block text-center" type="submit">Efetuar pagamento</button>
+          </form>
+        </div>
+      </div>
+</div>
+                    
+                       
+<!-- FOOTER -->
+   <%- include('../partials/footer.ejs') %>
     <!-- FOOTER -->
-    <%- include('../partials/footer.ejs') %>
-    <!-- FOOTER -->
+
+
+
+
 
 </body>
 
