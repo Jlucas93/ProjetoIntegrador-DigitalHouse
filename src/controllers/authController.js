@@ -112,7 +112,8 @@ const authController = {
     res.render('home/pagamentos', { carrinho, total })
   },
   pagamentoRealizado: (req, res) => {
-    return res.render('home/pagamentoRealizado')
+    req.session.carrinho = null;
+    res.render('home/pagamentoRealizado')
   },
   logout: (req, res) => {
     req.session.destroy((error) => {
