@@ -1,46 +1,53 @@
 <header class="p-3 bg-light text-white fixed-top" id="header">
-    <div class="container">
-      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img src="/img/logo.png"class="bi me-2" width="90" height="60" role="img" alt="logo da loja">
-        </a>
-        
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="/masculino" class="nav-link px-2 text-white">Masculino</a></li>
-          <li><a href="/feminino" class="nav-link px-2 text-white">Feminino</a></li>
-          <li><a href="/acessorios" class="nav-link px-2 text-white">Acessórios</a></li>
-          <li><a href="/calcados" class="nav-link px-2 text-white">Calçados</a></li>
-          <%if(locals.user && locals.user.isAdmin){ %>
-            <li><a href="/adm" class="nav-link px-2 text-white">ADM</a></li>
-            <% } %>
-        </ul>
+  <div class="container">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <img src="/img/logo.png" class="bi me-2" width="90" height="60" role="img" alt="logo da loja">
+      </a>
 
-        <% if(locals.user && user) { %>
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark text-white bg-light" placeholder="O que procura..."
-              aria-label="Search">
-          </form>  
-          <div class="text-end">
-            
-            <a href="/meusDados" class="btn btn-outline-light me-2">Meus Dados</a>
-           <a href="/carrinho" class="btn btn-outline-light me-2">Meu carrinho</a>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+        <li><a href="/masculino" class="nav-link px-2 text-white">Masculino</a></li>
+        <li><a href="/feminino" class="nav-link px-2 text-white">Feminino</a></li>
+        <li><a href="/acessorios" class="nav-link px-2 text-white">Acessórios</a></li>
+        <li><a href="/calcados" class="nav-link px-2 text-white">Calçados</a></li>
+        <%if(locals.user && locals.user.isAdmin){ %>
+          <li><a href="/adm" class="nav-link px-2 text-white">ADM</a></li>
+          <% } %>
+      </ul>
+      <% if(locals.user && locals.user.isAdmin) {%>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-white bg-light" placeholder="O que procura..."
+            aria-label="Search">
+        </form>
+        <div class="text-end">
           <span>Olá <%= locals.user.nome %></span>
           <a href="/logout"><i class='fas fa-sign-out-alt'></i></a>
+        </div>
+        <%} else if(locals.user && user) {%>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control form-control-dark text-white bg-light"
+              placeholder="O que procura..." aria-label="Search">
+          </form>
+          <div class="text-end">
+            <a href="/meusDados" class="btn btn-outline-light me-2">Meus Dados</a>
+            <a href="/carrinho" class="btn btn-outline-light me-2">Meu carrinho</a>
+            <span>Olá <%= locals.user.nome %></span>
+            <a href="/logout"><i class='fas fa-sign-out-alt'></i></a>
           </div>
-          <% } else{ %>
+          <%} else{ %>
             <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
               <input type="search" class="form-control form-control-light text-white bg-light" placeholder="Search..."
                 aria-label="Search">
             </form>
-  
+
             <div class="text-end">
               <a href="/login" class="btn btn-outline-light me-2">Login</a>
               <a href="/cadastro" class="btn btn-outline-light me-2">Cadastrar</a>
             </div>
             <% }%>
-  
-      </div>
+
     </div>
-  </header>
+  </div>
+</header>

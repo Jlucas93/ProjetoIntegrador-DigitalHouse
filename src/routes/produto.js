@@ -5,7 +5,7 @@ const multerStorage = require('../middlewares/multerStorage')
 
 const isLogged = require('../middlewares/isLogged')
 const isAdm = require("../middlewares/isAdm");
-const uploadIMG = multerStorage('imagem', '/produtoExibicao')
+const uploadIMG = multerStorage('imagem', 'img')
 
 router.use(isLogged)
 router.use(isAdm)

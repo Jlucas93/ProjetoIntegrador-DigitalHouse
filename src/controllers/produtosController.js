@@ -15,7 +15,7 @@ const produtoContoller = {
       await Produto.create({
         nome,
         cor,
-        imagem: 'img/produtoExibicao/' + req.file.filename,
+        imagem: 'img/' + req.file.filename,
         preco,
         estoque,
         tamanho,
