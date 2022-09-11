@@ -14,8 +14,8 @@ Este é projeto integradar do curso web fullstack da DigitalHouse, com o intuito
 <a href="">
     <img alt="Made by Gustavo Andreola" src="https://img.shields.io/badge/made%20by-Gustavo%20Andreola-blue">
 </a>
-<a href="">
-    <img alt="Made by Caue Franceschi" src="https://img.shields.io/badge/made%20by-Caue%20Franceschi-blue">
+<a href="https://www.linkedin.com/in/vanessa-carvalho-silva-99116412b/">
+    <img alt="Made by Vanessa Carvalho Silva" src="https://img.shields.io/badge/made%20by-Caue%20Franceschi-blue">
 </a>
 
 <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=blue">
