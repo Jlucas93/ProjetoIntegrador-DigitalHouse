@@ -11,7 +11,7 @@ Este é projeto integradar do curso web fullstack da DigitalHouse, com o intuito
 <a href="https://www.linkedin.com/in/lucasdiassilva/">
     <img alt="Made by Lucas Silva" src="https://img.shields.io/badge/made%20by-Lucas%20Silva-blue">
 </a>
-<a href="">
+<a href="https://www.linkedin.com/in/gustavo-andreola/">
     <img alt="Made by Gustavo Andreola" src="https://img.shields.io/badge/made%20by-Gustavo%20Andreola-blue">
 </a>
 <a href="https://www.linkedin.com/in/vanessa-carvalho-silva-99116412b/">
